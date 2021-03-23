@@ -1,0 +1,1425 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology">
+    <Prefix name="" IRI="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#ACE_inhibitors"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Albumin"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Amputations"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Anxiety"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Autonomic_pathology"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BMI_measurement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Baseline_ECG"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Blood_vessels_with_or_without_vitreous_hemorrhages"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Blurred_vision"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cerebrovascular_disease"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cholesterol"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Complications"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Confusion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Coronary_artery_disease"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DPP-4_inhibitors"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Diabetes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Diet"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Diffuse_pathology"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Examination_of_feet_for_pulses"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Exercise"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Family_history_of_diabetes_in_a_first_degree_relative"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Fasting_blood_lipids"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Fasting_plasma_glucose_level"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Fatigue"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Focal_pathology"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Frequent_infections"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Glucose"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Glycosylated_haemoglobin_test"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HDL"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Hard_exudates"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Headaches"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Heart_attack"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Height_measurement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#High"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#High_glucose_level"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Hyperosmolar_Hyperglycemic_Nonketotic_Syndrome"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Hypertension"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Hypoglycemia"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Increased_hunger"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Insulin"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Ketones"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LDL"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Leg_muscular_pain"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Long-term"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Low"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Macrovascular"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Measurement_of_blood_pressure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Measurement_of_visual_acuity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Metformin"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Microaneurysms"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Microvascular"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Moderate"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Motor_pathology"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Nephropathy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Nerve_pathology"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Neuropathy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Non-pharmacological"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Non-proliferative"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Overt_nephropathy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Overweight"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Patches_of_dark_skin"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Patient"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Peripheral_artery_disease"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Pharmacological"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Plasma_glucose_measurement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Polydipsia"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Polyuria"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Poor_obstetric_history"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Proliferative"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Rapid_heartbeat"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Record_of_exercise"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Reduce_alcohol_intake"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Retinal_hemorrhages"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Retinopathy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SGLT2_inhibitors"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sensory_pathology"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Short-term"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sleepiness"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Slow-healing_sores_and_wounds"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Slurred_speech"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Smoking_cessation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Soft_exudates"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Stroke"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sulfonylureas"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sweating"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Symptoms"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tests"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tingling_hands_and_feet"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Treatment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Triglycerides"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Urine_dipstick_test"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Urine_test"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Venous_loops"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Waist_Measurement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Weight_loss"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Weight_maintenace"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Weight_measurement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Whiteness_of_skin"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#2-hour_plasma_glucose_load"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Numbness_in_fingers,_toes_and_lips"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Retinal_examination_(fundoscopy)_through_eye_dilation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#describes"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#do_tests"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_complications"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_symptoms"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_a"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#part_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#perform_test"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasGender"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ACE_inhibitors"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Albumin"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Amputations"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Anxiety"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Autonomic_pathology"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#BMI_measurement"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Baseline_ECG"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Blood_vessels_with_or_without_vitreous_hemorrhages"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Blurred_vision"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Cholesterol-FBL"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Confusion"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DPP-4_inhibitors"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Diet"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Diffuse_pathology"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Examination_of_feet_for_pulses"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Family_history_of_diabetes_in_a_first_degree_relative"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Fasting_plasma_glucose_level"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Fatigue"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Focal_pathology"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Frequent_infections"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Glucose"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Glycosylated_haemoglobin_test"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#HDL_Triglycerides"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hard_exudates"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Headaches"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Heart_attack"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Height_measurement"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#High_exercise"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#High_glucose_level"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hypertension"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Increased_hunger"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Insulin"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ketones"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LDL_Triglycerides"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Leg_muscular_pain"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Low_exercise"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Measurement_of_blood_pressure"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Measurement_of_visual_acuity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Metformin"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Microaneurysms"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Moderate_exercise"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Motor_pathology"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Overt_nephropathy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Overweight"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Patches_of_dark_skin"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Patient_A"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Patient_B"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Plasma"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Polydipsia"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Polyuria"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Poor_obstettric_history"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Rapid_heartbeat"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Record_of_exercise"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Reduce_alcohol_intake"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Retinal_hemorrhages"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SGLT2_inhibitors"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sensory_pathology"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sleepiness"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Slow-healing_sores_and_wounds"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Slurred_speech"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Smoking_cessation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Soft_exudates"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Stroke"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sulfonylureas"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sweating"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Tingling_hands_and_feet"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Venous_loops"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Waist_Measurement"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Weight_loss"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Weight_maintenace"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Weight_measurement"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Whiteness_of_skin"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#2-hour_plasma_glucose_load"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Numbness_in_fingers,_toes_and_lips"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Retinal_examination_(fundoscopy)_through_eye_dilation"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#Autonomic_pathology"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#is_a"/>
+            <Class IRI="#Nerve_pathology"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Blood_vessels_with_or_without_vitreous_hemorrhages"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#is_a"/>
+            <Class IRI="#Proliferative"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Diffuse_pathology"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#is_a"/>
+            <Class IRI="#Nerve_pathology"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Focal_pathology"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#is_a"/>
+            <Class IRI="#Nerve_pathology"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Hard_exudates"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#is_a"/>
+            <Class IRI="#Non-proliferative"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Microaneurysms"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#is_a"/>
+            <Class IRI="#Non-proliferative"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Motor_pathology"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#is_a"/>
+            <Class IRI="#Nerve_pathology"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Retinal_hemorrhages"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#is_a"/>
+            <Class IRI="#Non-proliferative"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Sensory_pathology"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#is_a"/>
+            <Class IRI="#Nerve_pathology"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Soft_exudates"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#is_a"/>
+            <Class IRI="#Non-proliferative"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Venous_loops"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#is_a"/>
+            <Class IRI="#Non-proliferative"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#ACE_inhibitors"/>
+        <Class IRI="#Pharmacological"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Albumin"/>
+        <Class IRI="#Urine_dipstick_test"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Amputations"/>
+        <Class IRI="#Peripheral_artery_disease"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Anxiety"/>
+        <Class IRI="#Hypoglycemia"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Autonomic_pathology"/>
+        <Class IRI="#Nerve_pathology"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BMI_measurement"/>
+        <Class IRI="#Tests"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Baseline_ECG"/>
+        <Class IRI="#Tests"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Blood_vessels_with_or_without_vitreous_hemorrhages"/>
+        <Class IRI="#Proliferative"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Blurred_vision"/>
+        <Class IRI="#Symptoms"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cerebrovascular_disease"/>
+        <Class IRI="#Macrovascular"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cholesterol"/>
+        <Class IRI="#Fasting_blood_lipids"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Complications"/>
+        <Class IRI="#Diabetes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Confusion"/>
+        <Class IRI="#Hypoglycemia"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Coronary_artery_disease"/>
+        <Class IRI="#Macrovascular"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DPP-4_inhibitors"/>
+        <Class IRI="#Pharmacological"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Diet"/>
+        <Class IRI="#Non-pharmacological"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Diffuse_pathology"/>
+        <Class IRI="#Nerve_pathology"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Examination_of_feet_for_pulses"/>
+        <Class IRI="#Tests"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Exercise"/>
+        <Class IRI="#Non-pharmacological"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Family_history_of_diabetes_in_a_first_degree_relative"/>
+        <Class IRI="#Symptoms"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fasting_blood_lipids"/>
+        <Class IRI="#Tests"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fasting_plasma_glucose_level"/>
+        <Class IRI="#Plasma_glucose_measurement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fatigue"/>
+        <Class IRI="#Symptoms"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Focal_pathology"/>
+        <Class IRI="#Nerve_pathology"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Frequent_infections"/>
+        <Class IRI="#Symptoms"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Glucose"/>
+        <Class IRI="#Urine_test"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Glycosylated_haemoglobin_test"/>
+        <Class IRI="#Tests"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HDL"/>
+        <Class IRI="#Triglycerides"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Hard_exudates"/>
+        <Class IRI="#Non-proliferative"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Headaches"/>
+        <Class IRI="#Hypoglycemia"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Heart_attack"/>
+        <Class IRI="#Coronary_artery_disease"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Height_measurement"/>
+        <Class IRI="#Tests"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#High"/>
+        <Class IRI="#Exercise"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#High_glucose_level"/>
+        <Class IRI="#Hyperosmolar_Hyperglycemic_Nonketotic_Syndrome"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Hyperosmolar_Hyperglycemic_Nonketotic_Syndrome"/>
+        <Class IRI="#Short-term"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Hypertension"/>
+        <Class IRI="#Symptoms"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Hypoglycemia"/>
+        <Class IRI="#Short-term"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Increased_hunger"/>
+        <Class IRI="#Symptoms"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Insulin"/>
+        <Class IRI="#Pharmacological"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ketones"/>
+        <Class IRI="#Urine_test"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LDL"/>
+        <Class IRI="#Triglycerides"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Leg_muscular_pain"/>
+        <Class IRI="#Peripheral_artery_disease"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Long-term"/>
+        <Class IRI="#Complications"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Low"/>
+        <Class IRI="#Exercise"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Macrovascular"/>
+        <Class IRI="#Long-term"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Measurement_of_blood_pressure"/>
+        <Class IRI="#Tests"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Measurement_of_visual_acuity"/>
+        <Class IRI="#Tests"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Metformin"/>
+        <Class IRI="#Pharmacological"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Microaneurysms"/>
+        <Class IRI="#Non-proliferative"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Microvascular"/>
+        <Class IRI="#Long-term"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Moderate"/>
+        <Class IRI="#Exercise"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Motor_pathology"/>
+        <Class IRI="#Nerve_pathology"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Nephropathy"/>
+        <Class IRI="#Microvascular"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Nerve_pathology"/>
+        <Class IRI="#Neuropathy"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Neuropathy"/>
+        <Class IRI="#Microvascular"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Non-pharmacological"/>
+        <Class IRI="#Treatment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Non-proliferative"/>
+        <Class IRI="#Retinopathy"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Overt_nephropathy"/>
+        <Class IRI="#Nephropathy"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Overweight"/>
+        <Class IRI="#Symptoms"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Patches_of_dark_skin"/>
+        <Class IRI="#Symptoms"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Peripheral_artery_disease"/>
+        <Class IRI="#Macrovascular"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Pharmacological"/>
+        <Class IRI="#Treatment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Plasma_glucose_measurement"/>
+        <Class IRI="#Tests"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Polydipsia"/>
+        <Class IRI="#Symptoms"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Polyuria"/>
+        <Class IRI="#Symptoms"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Poor_obstetric_history"/>
+        <Class IRI="#Symptoms"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Proliferative"/>
+        <Class IRI="#Retinopathy"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Rapid_heartbeat"/>
+        <Class IRI="#Hypoglycemia"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Record_of_exercise"/>
+        <Class IRI="#Tests"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Reduce_alcohol_intake"/>
+        <Class IRI="#Non-pharmacological"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Retinal_hemorrhages"/>
+        <Class IRI="#Non-proliferative"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Retinopathy"/>
+        <Class IRI="#Microvascular"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SGLT2_inhibitors"/>
+        <Class IRI="#Pharmacological"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sensory_pathology"/>
+        <Class IRI="#Nerve_pathology"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Short-term"/>
+        <Class IRI="#Complications"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sleepiness"/>
+        <Class IRI="#Hypoglycemia"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Slow-healing_sores_and_wounds"/>
+        <Class IRI="#Symptoms"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Slurred_speech"/>
+        <Class IRI="#Hypoglycemia"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Smoking_cessation"/>
+        <Class IRI="#Non-pharmacological"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Soft_exudates"/>
+        <Class IRI="#Non-proliferative"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Stroke"/>
+        <Class IRI="#Cerebrovascular_disease"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sulfonylureas"/>
+        <Class IRI="#Pharmacological"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sweating"/>
+        <Class IRI="#Hypoglycemia"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Symptoms"/>
+        <Class IRI="#Diabetes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tests"/>
+        <Class IRI="#Diabetes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tingling_hands_and_feet"/>
+        <Class IRI="#Symptoms"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Treatment"/>
+        <Class IRI="#Diabetes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Triglycerides"/>
+        <Class IRI="#Fasting_blood_lipids"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Urine_dipstick_test"/>
+        <Class IRI="#Urine_test"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Urine_test"/>
+        <Class IRI="#Tests"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Venous_loops"/>
+        <Class IRI="#Non-proliferative"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Waist_Measurement"/>
+        <Class IRI="#Tests"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Weight_loss"/>
+        <Class IRI="#Symptoms"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Weight_maintenace"/>
+        <Class IRI="#Non-pharmacological"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Weight_measurement"/>
+        <Class IRI="#Tests"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Whiteness_of_skin"/>
+        <Class IRI="#Hypoglycemia"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#2-hour_plasma_glucose_load"/>
+        <Class IRI="#Plasma_glucose_measurement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Numbness_in_fingers,_toes_and_lips"/>
+        <Class IRI="#Hypoglycemia"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Retinal_examination_(fundoscopy)_through_eye_dilation"/>
+        <Class IRI="#Tests"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Polydipsia"/>
+        <Class IRI="#Polyuria"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Symptoms"/>
+        <Class IRI="#Treatment"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#ACE_inhibitors"/>
+        <NamedIndividual IRI="#ACE_inhibitors"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Albumin"/>
+        <NamedIndividual IRI="#Albumin"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Amputations"/>
+        <NamedIndividual IRI="#Amputations"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Anxiety"/>
+        <NamedIndividual IRI="#Anxiety"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Autonomic_pathology"/>
+        <NamedIndividual IRI="#Autonomic_pathology"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#BMI_measurement"/>
+        <NamedIndividual IRI="#BMI_measurement"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Baseline_ECG"/>
+        <NamedIndividual IRI="#Baseline_ECG"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Blood_vessels_with_or_without_vitreous_hemorrhages"/>
+        <NamedIndividual IRI="#Blood_vessels_with_or_without_vitreous_hemorrhages"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Blurred_vision"/>
+        <NamedIndividual IRI="#Blurred_vision"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Cholesterol"/>
+        <NamedIndividual IRI="#Cholesterol-FBL"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Confusion"/>
+        <NamedIndividual IRI="#Confusion"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DPP-4_inhibitors"/>
+        <NamedIndividual IRI="#DPP-4_inhibitors"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Diet"/>
+        <NamedIndividual IRI="#Diet"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Diffuse_pathology"/>
+        <NamedIndividual IRI="#Diffuse_pathology"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Examination_of_feet_for_pulses"/>
+        <NamedIndividual IRI="#Examination_of_feet_for_pulses"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Fasting_plasma_glucose_level"/>
+        <NamedIndividual IRI="#Fasting_plasma_glucose_level"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Fatigue"/>
+        <NamedIndividual IRI="#Fatigue"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Focal_pathology"/>
+        <NamedIndividual IRI="#Focal_pathology"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Frequent_infections"/>
+        <NamedIndividual IRI="#Frequent_infections"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Glucose"/>
+        <NamedIndividual IRI="#Glucose"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Glycosylated_haemoglobin_test"/>
+        <NamedIndividual IRI="#Glycosylated_haemoglobin_test"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#HDL"/>
+        <NamedIndividual IRI="#HDL_Triglycerides"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hard_exudates"/>
+        <NamedIndividual IRI="#Hard_exudates"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Headaches"/>
+        <NamedIndividual IRI="#Headaches"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Heart_attack"/>
+        <NamedIndividual IRI="#Heart_attack"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Height_measurement"/>
+        <NamedIndividual IRI="#Height_measurement"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#High"/>
+        <NamedIndividual IRI="#High_exercise"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#High_glucose_level"/>
+        <NamedIndividual IRI="#High_glucose_level"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hypertension"/>
+        <NamedIndividual IRI="#Hypertension"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Increased_hunger"/>
+        <NamedIndividual IRI="#Increased_hunger"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Insulin"/>
+        <NamedIndividual IRI="#Insulin"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Ketones"/>
+        <NamedIndividual IRI="#Ketones"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#LDL"/>
+        <NamedIndividual IRI="#LDL_Triglycerides"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Leg_muscular_pain"/>
+        <NamedIndividual IRI="#Leg_muscular_pain"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Low"/>
+        <NamedIndividual IRI="#Low_exercise"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Measurement_of_blood_pressure"/>
+        <NamedIndividual IRI="#Measurement_of_blood_pressure"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Measurement_of_visual_acuity"/>
+        <NamedIndividual IRI="#Measurement_of_visual_acuity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Metformin"/>
+        <NamedIndividual IRI="#Metformin"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Microaneurysms"/>
+        <NamedIndividual IRI="#Microaneurysms"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Moderate"/>
+        <NamedIndividual IRI="#Moderate_exercise"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Motor_pathology"/>
+        <NamedIndividual IRI="#Motor_pathology"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Overt_nephropathy"/>
+        <NamedIndividual IRI="#Overt_nephropathy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Overweight"/>
+        <NamedIndividual IRI="#Overweight"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Patches_of_dark_skin"/>
+        <NamedIndividual IRI="#Patches_of_dark_skin"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Patient"/>
+        <NamedIndividual IRI="#Patient_A"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Patient"/>
+        <NamedIndividual IRI="#Patient_B"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Plasma_glucose_measurement"/>
+        <NamedIndividual IRI="#Plasma"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Polydipsia"/>
+        <NamedIndividual IRI="#Polydipsia"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Polyuria"/>
+        <NamedIndividual IRI="#Polyuria"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Poor_obstetric_history"/>
+        <NamedIndividual IRI="#Poor_obstettric_history"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Rapid_heartbeat"/>
+        <NamedIndividual IRI="#Rapid_heartbeat"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Record_of_exercise"/>
+        <NamedIndividual IRI="#Record_of_exercise"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Reduce_alcohol_intake"/>
+        <NamedIndividual IRI="#Reduce_alcohol_intake"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Retinal_hemorrhages"/>
+        <NamedIndividual IRI="#Retinal_hemorrhages"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SGLT2_inhibitors"/>
+        <NamedIndividual IRI="#SGLT2_inhibitors"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Sensory_pathology"/>
+        <NamedIndividual IRI="#Sensory_pathology"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Sleepiness"/>
+        <NamedIndividual IRI="#Sleepiness"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Slow-healing_sores_and_wounds"/>
+        <NamedIndividual IRI="#Slow-healing_sores_and_wounds"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Slurred_speech"/>
+        <NamedIndividual IRI="#Slurred_speech"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Smoking_cessation"/>
+        <NamedIndividual IRI="#Smoking_cessation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Soft_exudates"/>
+        <NamedIndividual IRI="#Soft_exudates"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Stroke"/>
+        <NamedIndividual IRI="#Stroke"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Sulfonylureas"/>
+        <NamedIndividual IRI="#Sulfonylureas"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Sweating"/>
+        <NamedIndividual IRI="#Sweating"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Tingling_hands_and_feet"/>
+        <NamedIndividual IRI="#Tingling_hands_and_feet"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Venous_loops"/>
+        <NamedIndividual IRI="#Venous_loops"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Waist_Measurement"/>
+        <NamedIndividual IRI="#Waist_Measurement"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Weight_loss"/>
+        <NamedIndividual IRI="#Weight_loss"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Weight_maintenace"/>
+        <NamedIndividual IRI="#Weight_maintenace"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Weight_measurement"/>
+        <NamedIndividual IRI="#Weight_measurement"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Whiteness_of_skin"/>
+        <NamedIndividual IRI="#Whiteness_of_skin"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#2-hour_plasma_glucose_load"/>
+        <NamedIndividual IRI="#2-hour_plasma_glucose_load"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Numbness_in_fingers,_toes_and_lips"/>
+        <NamedIndividual IRI="#Numbness_in_fingers,_toes_and_lips"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Retinal_examination_(fundoscopy)_through_eye_dilation"/>
+        <NamedIndividual IRI="#Retinal_examination_(fundoscopy)_through_eye_dilation"/>
+    </ClassAssertion>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Patient_A"/>
+        <NamedIndividual IRI="#Patient_B"/>
+    </DifferentIndividuals>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_symptoms"/>
+        <NamedIndividual IRI="#Patient_A"/>
+        <NamedIndividual IRI="#Polyuria"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_symptoms"/>
+        <NamedIndividual IRI="#Patient_B"/>
+        <NamedIndividual IRI="#Polydipsia"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#do_tests"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#do_tests"/>
+            <Class IRI="#Tests"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has_complications"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#has_complications"/>
+            <Class IRI="#Complications"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has_symptoms"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#has_symptoms"/>
+            <Class IRI="#Symptoms"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#perform_test"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#perform_test"/>
+            <Class IRI="#Tests"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasGender"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S1</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Patient"/>
+                <Variable IRI="#p"/>
+            </ClassAtom>
+        </Body>
+        <Head>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasGender"/>
+                <Variable IRI="#p"/>
+                <Literal>Male</Literal>
+            </DataPropertyAtom>
+        </Head>
+    </DLSafeRule>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
