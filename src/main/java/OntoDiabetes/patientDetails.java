@@ -1,8 +1,6 @@
 package OntoDiabetes;
 
-import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
 
 import java.sql.Connection;
@@ -11,17 +9,24 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
+
 import java.time.LocalDate;
 import java.time.Period;
-import java.time.format.DateTimeFormatter;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.Locale;
 
+import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.model.OWLClass;
 import org.semanticweb.owlapi.model.OWLClassAssertionAxiom;
+import org.semanticweb.owlapi.model.OWLDataFactory;
+import org.semanticweb.owlapi.model.OWLDataProperty;
+import org.semanticweb.owlapi.model.OWLDataPropertyAssertionAxiom;
 import org.semanticweb.owlapi.model.OWLNamedIndividual;
+import org.semanticweb.owlapi.model.OWLOntology;
+import org.semanticweb.owlapi.model.OWLOntologyCreationException;
+import org.semanticweb.owlapi.model.OWLOntologyManager;
+import org.semanticweb.owlapi.model.OWLOntologyStorageException;
+import org.semanticweb.owlapi.model.PrefixManager;
+import org.semanticweb.owlapi.rdf.rdfxml.renderer.XMLWriterPreferences;
+import org.semanticweb.owlapi.util.DefaultPrefixManager;
 
 import jakarta.servlet.*;
 import jakarta.servlet.annotation.WebServlet;
@@ -180,11 +185,80 @@ public class patientDetails extends HttpServlet {
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		} catch (OWLOntologyCreationException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (OWLOntologyStorageException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 
 	}
 
-	public void addPatientToOntology(String userId , String name , double height , double weight, double bmi , String gender , String hasChild) {
+	public void addPatientToOntology(String userId, String name, double height, double weight, double bmi,
+			String gender, String hasChild) throws OWLOntologyCreationException, OWLOntologyStorageException {
+		
+		
+		OWLOntologyManager ontologyManager = OWLManager.createOWLOntologyManager();
+		OWLOntology ontology = ontologyManager.loadOntologyFromOntologyDocument(new  File(getServletContext().getRealPath("Diabetes.owl")));
+		String base = "http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#";
+		PrefixManager pm = new DefaultPrefixManager(null, null, base);
+		OWLDataFactory dataFactory = OWLManager.getOWLDataFactory();
+
+		// Adding an instance to class patient
+		OWLClass patientClass = dataFactory.getOWLClass(":Patient", pm);
+		OWLNamedIndividual patient = dataFactory.getOWLNamedIndividual(":Paitent_" + userId, pm);
+
+		OWLClassAssertionAxiom classAssertion = dataFactory.getOWLClassAssertionAxiom(patientClass, patient);
+		ontologyManager.addAxiom(ontology, classAssertion);
+
+		XMLWriterPreferences.getInstance().setUseNamespaceEntities(true);
+
+		// Adding Data Property
+
+		// USERID
+		OWLDataProperty hasPatientID = dataFactory.getOWLDataProperty(":hasPatientID", pm);
+		OWLDataPropertyAssertionAxiom idPropertyAssertion = dataFactory.getOWLDataPropertyAssertionAxiom(hasPatientID,
+				patient, userId);
+		ontologyManager.addAxiom(ontology, idPropertyAssertion);
+
+		// FULL NAME
+		OWLDataProperty hasFullName = dataFactory.getOWLDataProperty(":hasFullName", pm);
+		OWLDataPropertyAssertionAxiom namePropertyAssertion = dataFactory.getOWLDataPropertyAssertionAxiom(hasFullName,
+				patient, name);
+		ontologyManager.addAxiom(ontology, namePropertyAssertion);
+
+		// HEIGHT
+		OWLDataProperty hasHeight = dataFactory.getOWLDataProperty(":hasHeight", pm);
+		OWLDataPropertyAssertionAxiom heightPropertyAssertion = dataFactory.getOWLDataPropertyAssertionAxiom(hasHeight,
+				patient, height);
+		ontologyManager.addAxiom(ontology, heightPropertyAssertion);
+
+		// WEIGHT
+		OWLDataProperty hasWeight = dataFactory.getOWLDataProperty(":hasWeight", pm);
+		OWLDataPropertyAssertionAxiom weightPropertyAssertion = dataFactory.getOWLDataPropertyAssertionAxiom(hasWeight,
+				patient, weight);
+		ontologyManager.addAxiom(ontology, weightPropertyAssertion);
+
+		// BMI
+		OWLDataProperty hasBmi = dataFactory.getOWLDataProperty(":hasBmi", pm);
+		OWLDataPropertyAssertionAxiom bmiPropertyAssertion = dataFactory.getOWLDataPropertyAssertionAxiom(hasBmi,
+				patient, bmi);
+		ontologyManager.addAxiom(ontology, bmiPropertyAssertion);
+
+		// Children
+		OWLDataProperty hasChildren = dataFactory.getOWLDataProperty(":hasChildren", pm);
+		OWLDataPropertyAssertionAxiom childPropertyAssertion = dataFactory.getOWLDataPropertyAssertionAxiom(hasChildren,
+				patient, hasChild);
+		ontologyManager.addAxiom(ontology, childPropertyAssertion);
+
+		// Gender
+		OWLDataProperty hasGender = dataFactory.getOWLDataProperty(":hasGender", pm);
+		OWLDataPropertyAssertionAxiom genderPropertyAssertion = dataFactory.getOWLDataPropertyAssertionAxiom(hasGender,
+				patient, gender);
+		ontologyManager.addAxiom(ontology, genderPropertyAssertion);
+
+		ontologyManager.saveOntology(ontology);
 
 	}
 
@@ -281,8 +355,8 @@ public class patientDetails extends HttpServlet {
 
 	public void savePatient(String userid, String surname, String middlename, String lastname, String gender,
 			String nic, String dateofbirth, String maritalstatus, double height, double weight, String phonenumber,
-			String homenumber, String worknumber, String other, String haschild)
-			throws ClassNotFoundException, SQLException, ParseException {
+			String homenumber, String worknumber, String other, String haschild) throws ClassNotFoundException,
+			SQLException, ParseException, OWLOntologyCreationException, OWLOntologyStorageException {
 		Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 		// variables
 		final String url = "jdbc:sqlserver://DESKTOP-V30A0OF\\SQLEXPRESS;databaseName=OntoDiabetes;";
@@ -308,7 +382,8 @@ public class patientDetails extends HttpServlet {
 			st.execute(query);
 
 			// adding Data to ontology
-			addPatientToOntology(userid, surname + " " + middlename + " " + lastname, height, weight, bmi, gender,haschild);
+			addPatientToOntology(userid, surname + " " + middlename + " " + lastname, height, weight, bmi, gender,
+					haschild);
 
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

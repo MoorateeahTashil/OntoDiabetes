@@ -30,33 +30,38 @@ public class DbConnect {
 
 	public static void main(String[] args) throws OWLOntologyCreationException, SQWRLException, SWRLParseException, OWLOntologyStorageException {
 		// Create OWLOntology instance using the OWLAPI
-		OWLOntologyManager ontologyManager = OWLManager.createOWLOntologyManager();
-		OWLOntology ontology = ontologyManager.loadOntologyFromOntologyDocument(new File("src/main/java/Diabetes.owl"));
 		
 		
+		Ontology o = new Ontology();
 		
 		
-	    String defPrefix = ontology.getOntologyID().getOntologyIRI() + "#";
-		String base = "http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#";
-		PrefixManager pm = new DefaultPrefixManager(null, null, base);
-		OWLDataFactory dataFactory = OWLManager.getOWLDataFactory();
-		OWLClass person = dataFactory.getOWLClass(":Patient", pm);
-		OWLNamedIndividual mary = dataFactory.getOWLNamedIndividual(":Mary", pm);
-		
-	
-		OWLClassAssertionAxiom classAssertion = dataFactory.getOWLClassAssertionAxiom(person, mary);
-		ontologyManager.addAxiom(ontology, classAssertion);
-
-		XMLWriterPreferences.getInstance().setUseNamespaceEntities(true);
-
-		
-		OWLDataProperty indlName = dataFactory.getOWLDataProperty(":hasGender", pm);
-		OWLDataPropertyAssertionAxiom dataPropertyAssertion = dataFactory.getOWLDataPropertyAssertionAxiom(indlName, mary,"Female");
-		
-		ontologyManager.addAxiom(ontology,dataPropertyAssertion);
-
-		
-		ontologyManager.saveOntology(ontology);
+//		OWLOntologyManager ontologyManager = OWLManager.createOWLOntologyManager();
+//		OWLOntology ontology = ontologyManager.loadOntologyFromOntologyDocument(new File("src/main/java/Diabetes.owl"));
+//		
+//		
+//		
+//		
+//	    String defPrefix = ontology.getOntologyID().getOntologyIRI() + "#";
+//		String base = "http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#";
+//		PrefixManager pm = new DefaultPrefixManager(null, null, base);
+//		OWLDataFactory dataFactory = OWLManager.getOWLDataFactory();
+//		OWLClass person = dataFactory.getOWLClass(":Patient", pm);
+//		OWLNamedIndividual mary = dataFactory.getOWLNamedIndividual(":Mary", pm);
+//		
+//	
+//		OWLClassAssertionAxiom classAssertion = dataFactory.getOWLClassAssertionAxiom(person, mary);
+//		ontologyManager.addAxiom(ontology, classAssertion);
+//
+//		XMLWriterPreferences.getInstance().setUseNamespaceEntities(true);
+//
+//		
+//		OWLDataProperty indlName = dataFactory.getOWLDataProperty(":hasGender", pm);
+//		OWLDataPropertyAssertionAxiom dataPropertyAssertion = dataFactory.getOWLDataPropertyAssertionAxiom(indlName, mary,"Female");
+//		
+//		ontologyManager.addAxiom(ontology,dataPropertyAssertion);
+//
+//		
+//		ontologyManager.saveOntology(ontology);
 
 //		// Create SQWRL query engine using the SWRLAPI
 //		SQWRLQueryEngine queryEngine = SWRLAPIFactory.createSQWRLQueryEngine(ontology);
