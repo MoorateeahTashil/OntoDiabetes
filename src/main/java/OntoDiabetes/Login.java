@@ -1,7 +1,6 @@
 package OntoDiabetes;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -55,23 +54,41 @@ public class Login extends HttpServlet {
 			throws ServletException, IOException {
 		String username = request.getParameter("emailTextBox");
 		String password = request.getParameter("passwordTextBox");
+		
+		username = "patient@gmail.com";
+		password = "Password001!";
 		try {
 			if (ValidateData(username, password)) {
 				
 				updateLoginDate(username);
 				String userID = getUserId(username);
+				String userType = getType(username);			
+				
 				HttpSession session = request.getSession(false);
 				if (session != null) {
 				    // a session exists
 					session.setAttribute("userID", userID);
+					session.setAttribute("userType", userType);
 
 				} else {
 				    // no session
 				}
-				RequestDispatcher req = request.getRequestDispatcher(userID);
-				req.forward(request, response);
+		
+				if(!checkPatientDetails(userID))
+				{
+					if (userType.toLowerCase().equals("patient")) {
+						response.sendRedirect("patientDetails.jsp");
+					}
+				}
+				else
+				{
+					RequestDispatcher req = request.getRequestDispatcher(userID);
+					req.forward(request, response);
+				}
+				
 
 			} else {
+				errorMessage = errorMessage.replace("null", "");
 				request.setAttribute("errorMessage", errorMessage);
 				RequestDispatcher req = request.getRequestDispatcher("login.jsp");
 				req.include(request, response);
@@ -81,7 +98,79 @@ public class Login extends HttpServlet {
 			e.printStackTrace();
 		}
 	}
+	
+	
+	public String getType(String email) throws ClassNotFoundException, SQLException {
+		Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+		// variables
+		final String url = "jdbc:sqlserver://DESKTOP-V30A0OF\\SQLEXPRESS;databaseName=OntoDiabetes;";
+		final String user = "sa";
+		final String password = "Password001!";
+		String type = "";
 
+		con = DriverManager.getConnection(url, user, password);
+		try {
+			Statement st = con.createStatement();
+
+			String query = "select [type] from [OntoDiabetes_User] where [email]='" + email + "';";
+
+			// send and execute SQL query in Database software
+			ResultSet rs = st.executeQuery(query);
+
+			// process the ResultSet object
+			while (rs.next()) {
+				type = rs.getString(1);
+			}
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		con.close();
+		return type;
+
+	}
+
+	
+
+	public boolean checkPatientDetails(String userID) throws ClassNotFoundException, SQLException {
+		Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+		// variables
+		final String url = "jdbc:sqlserver://DESKTOP-V30A0OF\\SQLEXPRESS;databaseName=OntoDiabetes;";
+		final String user = "sa";
+		final String password = "Password001!";
+		String dbUserId = "";
+		Boolean detailsFilled = false;
+		// establish the connection
+		con = DriverManager.getConnection(url, user, password);
+		try {
+			Statement st = con.createStatement();
+
+			String query = "select [userid] from [dbo].[OntoDiabetes_PatientDetails] where [userid]='" + userID + "';";
+
+			// send and execute SQL query in Database software
+			ResultSet rs = st.executeQuery(query);
+
+			// process the ResultSet object
+			while (rs.next()) {
+				dbUserId = rs.getString(1);
+			}
+
+			if (dbUserId == null || dbUserId == "") {
+				detailsFilled = false;
+			} else {
+				detailsFilled = true;
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		con.close();
+		return detailsFilled;
+	}
+	
 	public String getUserId(String email) throws ClassNotFoundException, SQLException {
 		Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 		// variables

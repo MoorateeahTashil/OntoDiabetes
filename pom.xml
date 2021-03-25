@@ -33,16 +33,13 @@
 			<version>${swrlapi.version}</version>
 		</dependency>
 
+
 		<dependency>
 			<groupId>edu.stanford.swrl</groupId>
 			<artifactId>swrlapi-drools-engine</artifactId>
 			<version>${swrlapi.drools.version}</version>
 		</dependency>
 
-		<dependency>
-			<groupId>net.sourceforge.owlapi</groupId>
-			<artifactId>owlapi-osgidistribution</artifactId>
-		</dependency>
 
 		<dependency>
 			<groupId>org.slf4j</groupId>

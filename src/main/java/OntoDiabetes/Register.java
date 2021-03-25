@@ -59,25 +59,28 @@ public class Register extends HttpServlet {
 
 		errorMessage = "";
 		try {
-			if (ValidateData(username, password,Type,repeatPassword,specialDocCode)) {
-				
+			if (ValidateData(username, password, Type, repeatPassword, specialDocCode)) {
+
 				createUser(username, password, Type);
-				
+
 				updateLoginDate(username);
 				String userID = getUserId(username);
+				String userType = getType(username);			
+
 				HttpSession session = request.getSession(false);
 				if (session != null) {
-				    // a session exists
+					// a session exists
 					session.setAttribute("userID", userID);
 
 				} else {
-				    // no session
+					// no session
 				}
-				RequestDispatcher req = request.getRequestDispatcher("dashboard.jsp");
-				req.forward(request, response);
+				if (userType.toLowerCase().equals("patient")) {
+					response.sendRedirect("patientDetails.jsp");
+				}
 
 			} else {
-				
+
 				errorMessage = errorMessage.replace("null", "");
 				request.setAttribute("errorMessage", errorMessage);
 				RequestDispatcher req = request.getRequestDispatcher("register.jsp");
@@ -115,7 +118,7 @@ public class Register extends HttpServlet {
 
 			// Compile the ReGex
 			Pattern p = Pattern.compile(regex);
-	        Matcher m = p.matcher(Password); 
+			Matcher m = p.matcher(Password);
 
 			boolean b = m.matches();
 
@@ -153,7 +156,6 @@ public class Register extends HttpServlet {
 
 		}
 
-		
 		if (type.equals("Doctor")) {
 			if (specialDocCode == null || specialDocCode == "") {
 				errorMessage += "Special Doctor Code cannot be empty <br/>";
@@ -182,7 +184,6 @@ public class Register extends HttpServlet {
 		final String url = "jdbc:sqlserver://DESKTOP-V30A0OF\\SQLEXPRESS;databaseName=OntoDiabetes;";
 		final String user = "sa";
 		final String password = "Password001!";
-		String userID = "";
 
 		Date date = new Date();
 		SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
@@ -192,8 +193,8 @@ public class Register extends HttpServlet {
 			Statement st = con.createStatement();
 
 			String query = " INSERT INTO OntoDiabetes_User([email] ,[password] ,[account_locked] ,[number_of_attempts] ,[date_last_login] ,[type] ,[date_created]) VALUES('"
-					+ email + "','" + webPassword + "','No','0','" + formatter.format(date) + "','" + type + "','"
-					+ formatter.format(date) + "')";
+					+ email + "','" + CreateMD5(webPassword) + "','No','0','" + formatter.format(date) + "','" + type
+					+ "','" + formatter.format(date) + "')";
 
 			// send and execute SQL query in Database software
 			st.execute(query);
@@ -245,8 +246,7 @@ public class Register extends HttpServlet {
 		return emailExistance;
 
 	}
-	
-	
+
 	public void updateLoginDate(String email) throws SQLException, ClassNotFoundException {
 
 		Date date = new Date();
@@ -274,7 +274,39 @@ public class Register extends HttpServlet {
 		}
 
 	}
-	
+
+	public String getType(String email) throws ClassNotFoundException, SQLException {
+		Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+		// variables
+		final String url = "jdbc:sqlserver://DESKTOP-V30A0OF\\SQLEXPRESS;databaseName=OntoDiabetes;";
+		final String user = "sa";
+		final String password = "Password001!";
+		String type = "";
+
+		con = DriverManager.getConnection(url, user, password);
+		try {
+			Statement st = con.createStatement();
+
+			String query = "select [type] from [OntoDiabetes_User] where [email]='" + email + "';";
+
+			// send and execute SQL query in Database software
+			ResultSet rs = st.executeQuery(query);
+
+			// process the ResultSet object
+			while (rs.next()) {
+				type = rs.getString(1);
+			}
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		con.close();
+		return type;
+
+	}
+
 	public String getUserId(String email) throws ClassNotFoundException, SQLException {
 		Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 		// variables

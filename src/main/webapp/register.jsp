@@ -19,9 +19,8 @@
 <!-- Custom fonts for this template-->
 <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet"
 	type="text/css">
-<link
-	href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&display=swap"
-	rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"/>
+
 <!-- Custom styles for this template-->
 <link href="css/sb-admin-2.min.css" rel="stylesheet">
 

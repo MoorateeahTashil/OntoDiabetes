@@ -123,10 +123,58 @@
     
 
 
+    <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#hasBmi -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#hasBmi">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#hasChildren -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#hasChildren">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#hasFullName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#hasFullName">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#hasGender -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#hasGender">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#hasHeight -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#hasHeight">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#hasPatientID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#hasPatientID">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#hasWeight -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#hasWeight">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
     </owl:DatatypeProperty>
     
 
@@ -1307,6 +1355,15 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Low_exercise">
         <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Low"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Mary -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Mary">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Patient"/>
+        <Diabetes_ontology:hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Female</Diabetes_ontology:hasGender>
     </owl:NamedIndividual>
     
 
