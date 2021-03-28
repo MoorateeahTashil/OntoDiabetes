@@ -22,7 +22,10 @@ import jakarta.servlet.http.*;
 @WebServlet("/Login")
 public class Login extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
+	public final String url = "jdbc:sqlserver://DESKTOP-V30A0OF\\SQLEXPRESS;databaseName=OntoDiabetes;";
+	public final String user = "sa";
+	public final String password = "Password001!";
+	
 	public static Connection con;
 	public static String errorMessage;
 
@@ -82,7 +85,7 @@ public class Login extends HttpServlet {
 				}
 				else
 				{
-					RequestDispatcher req = request.getRequestDispatcher(userID);
+					RequestDispatcher req = request.getRequestDispatcher("dashboard.jsp");
 					req.forward(request, response);
 				}
 				
@@ -103,9 +106,7 @@ public class Login extends HttpServlet {
 	public String getType(String email) throws ClassNotFoundException, SQLException {
 		Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 		// variables
-		final String url = "jdbc:sqlserver://DESKTOP-V30A0OF\\SQLEXPRESS;databaseName=OntoDiabetes;";
-		final String user = "sa";
-		final String password = "Password001!";
+
 		String type = "";
 
 		con = DriverManager.getConnection(url, user, password);
@@ -137,9 +138,7 @@ public class Login extends HttpServlet {
 	public boolean checkPatientDetails(String userID) throws ClassNotFoundException, SQLException {
 		Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 		// variables
-		final String url = "jdbc:sqlserver://DESKTOP-V30A0OF\\SQLEXPRESS;databaseName=OntoDiabetes;";
-		final String user = "sa";
-		final String password = "Password001!";
+
 		String dbUserId = "";
 		Boolean detailsFilled = false;
 		// establish the connection
@@ -174,9 +173,7 @@ public class Login extends HttpServlet {
 	public String getUserId(String email) throws ClassNotFoundException, SQLException {
 		Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 		// variables
-		final String url = "jdbc:sqlserver://DESKTOP-V30A0OF\\SQLEXPRESS;databaseName=OntoDiabetes;";
-		final String user = "sa";
-		final String password = "Password001!";
+
 		String userID = "";
 
 		con = DriverManager.getConnection(url, user, password);
@@ -248,9 +245,7 @@ public class Login extends HttpServlet {
 	public Boolean isAccountLocked(String email) throws ClassNotFoundException, SQLException {
 		Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 		// variables
-		final String url = "jdbc:sqlserver://DESKTOP-V30A0OF\\SQLEXPRESS;databaseName=OntoDiabetes;";
-		final String user = "sa";
-		final String password = "Password001!";
+
 		String accountLocked = "";
 		Boolean accountStatus = false;
 		// establish the connection
@@ -286,9 +281,7 @@ public class Login extends HttpServlet {
 
 		Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 		// variables
-		final String url = "jdbc:sqlserver://DESKTOP-V30A0OF\\SQLEXPRESS;databaseName=OntoDiabetes;";
-		final String user = "sa";
-		final String password = "Password001!";
+
 		String emailDb = "";
 		Boolean emailExistance = false;
 		// establish the connection
@@ -325,9 +318,7 @@ public class Login extends HttpServlet {
 
 		Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 		// variables
-		final String url = "jdbc:sqlserver://DESKTOP-V30A0OF\\SQLEXPRESS;databaseName=OntoDiabetes;";
-		final String user = "sa";
-		final String password = "Password001!";
+
 		Boolean passwordValidator = false;
 
 		// establish the connection
@@ -364,9 +355,8 @@ public class Login extends HttpServlet {
 
 		Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 		// variables
-		final String url = "jdbc:sqlserver://DESKTOP-V30A0OF\\SQLEXPRESS;databaseName=OntoDiabetes;";
-		final String user = "sa";
-		final String password = "Password001!";
+
+
 		int NumberofAttempts = 0;
 
 		// establish the connection
@@ -398,9 +388,7 @@ public class Login extends HttpServlet {
 		}
 		Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 		// variables
-		final String url = "jdbc:sqlserver://DESKTOP-V30A0OF\\SQLEXPRESS;databaseName=OntoDiabetes;";
-		final String user = "sa";
-		final String password = "Password001!";
+
 
 		// establish the connection
 		con = DriverManager.getConnection(url, user, password);
@@ -423,9 +411,6 @@ public class Login extends HttpServlet {
 
 		Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 		// variables
-		final String url = "jdbc:sqlserver://DESKTOP-V30A0OF\\SQLEXPRESS;databaseName=OntoDiabetes;";
-		final String user = "sa";
-		final String password = "Password001!";
 
 		// establish the connection
 		con = DriverManager.getConnection(url, user, password);
@@ -454,9 +439,6 @@ public class Login extends HttpServlet {
 
 		Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 		// variables
-		final String url = "jdbc:sqlserver://DESKTOP-V30A0OF\\SQLEXPRESS;databaseName=OntoDiabetes;";
-		final String user = "sa";
-		final String password = "Password001!";
 
 		// establish the connection
 		con = DriverManager.getConnection(url, user, password);

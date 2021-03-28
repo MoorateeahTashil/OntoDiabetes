@@ -24,7 +24,10 @@ import jakarta.servlet.http.*;
 @WebServlet("/Register")
 public class Register extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
+	public final String url = "jdbc:sqlserver://DESKTOP-V30A0OF\\SQLEXPRESS;databaseName=OntoDiabetes;";
+	public final String user = "sa";
+	public final String password = "Password001!";
+	
 	public static Connection con;
 	public static String errorMessage;
 
@@ -78,6 +81,11 @@ public class Register extends HttpServlet {
 				if (userType.toLowerCase().equals("patient")) {
 					response.sendRedirect("patientDetails.jsp");
 				}
+				else
+				{
+					response.sendRedirect("dashboard.jsp");
+				}
+				
 
 			} else {
 
@@ -181,9 +189,6 @@ public class Register extends HttpServlet {
 	public void createUser(String email, String webPassword, String type) throws ClassNotFoundException, SQLException {
 		Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 		// variables
-		final String url = "jdbc:sqlserver://DESKTOP-V30A0OF\\SQLEXPRESS;databaseName=OntoDiabetes;";
-		final String user = "sa";
-		final String password = "Password001!";
 
 		Date date = new Date();
 		SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
@@ -212,9 +217,7 @@ public class Register extends HttpServlet {
 
 		Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 		// variables
-		final String url = "jdbc:sqlserver://DESKTOP-V30A0OF\\SQLEXPRESS;databaseName=OntoDiabetes;";
-		final String user = "sa";
-		final String password = "Password001!";
+
 		String emailDb = "";
 		Boolean emailExistance = false;
 		// establish the connection
@@ -254,9 +257,7 @@ public class Register extends HttpServlet {
 
 		Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 		// variables
-		final String url = "jdbc:sqlserver://DESKTOP-V30A0OF\\SQLEXPRESS;databaseName=OntoDiabetes;";
-		final String user = "sa";
-		final String password = "Password001!";
+
 
 		// establish the connection
 		con = DriverManager.getConnection(url, user, password);
@@ -278,9 +279,7 @@ public class Register extends HttpServlet {
 	public String getType(String email) throws ClassNotFoundException, SQLException {
 		Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 		// variables
-		final String url = "jdbc:sqlserver://DESKTOP-V30A0OF\\SQLEXPRESS;databaseName=OntoDiabetes;";
-		final String user = "sa";
-		final String password = "Password001!";
+
 		String type = "";
 
 		con = DriverManager.getConnection(url, user, password);
@@ -310,9 +309,7 @@ public class Register extends HttpServlet {
 	public String getUserId(String email) throws ClassNotFoundException, SQLException {
 		Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 		// variables
-		final String url = "jdbc:sqlserver://DESKTOP-V30A0OF\\SQLEXPRESS;databaseName=OntoDiabetes;";
-		final String user = "sa";
-		final String password = "Password001!";
+
 		String userID = "";
 
 		con = DriverManager.getConnection(url, user, password);

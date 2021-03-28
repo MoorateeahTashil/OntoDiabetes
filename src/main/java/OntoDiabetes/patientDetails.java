@@ -38,7 +38,10 @@ import jakarta.servlet.http.*;
 @WebServlet("/patientDetails")
 public class patientDetails extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
+	public final String url = "jdbc:sqlserver://DESKTOP-V30A0OF\\SQLEXPRESS;databaseName=OntoDiabetes;";
+	public final String user = "sa";
+	public final String password = "Password001!";
+	
 	public static Connection con;
 	public static String errorMessage;
 
@@ -144,8 +147,9 @@ public class patientDetails extends HttpServlet {
 
 				savePatient(userID, surname, middlename, forename, gender, nic, dob, maritalstatus, height, weight,
 						mobilenumber, homenumber, worknumber, other, haschild);
-
-				RequestDispatcher req = request.getRequestDispatcher("patientDetails.jsp");
+				addSymtompsTask(userID);
+				addPatientStage(userID);
+				RequestDispatcher req = request.getRequestDispatcher("dashboard.jsp");
 				req.include(request, response);
 			} else {
 
@@ -197,10 +201,10 @@ public class patientDetails extends HttpServlet {
 
 	public void addPatientToOntology(String userId, String name, double height, double weight, double bmi,
 			String gender, String hasChild) throws OWLOntologyCreationException, OWLOntologyStorageException {
-		
-		
+
 		OWLOntologyManager ontologyManager = OWLManager.createOWLOntologyManager();
-		OWLOntology ontology = ontologyManager.loadOntologyFromOntologyDocument(new  File(getServletContext().getRealPath("Diabetes.owl")));
+		OWLOntology ontology = ontologyManager
+				.loadOntologyFromOntologyDocument(new File(getServletContext().getRealPath("Diabetes.owl")));
 		String base = "http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#";
 		PrefixManager pm = new DefaultPrefixManager(null, null, base);
 		OWLDataFactory dataFactory = OWLManager.getOWLDataFactory();
@@ -282,9 +286,7 @@ public class patientDetails extends HttpServlet {
 	public boolean checkNic(String nic) throws ClassNotFoundException, SQLException {
 		Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 		// variables
-		final String url = "jdbc:sqlserver://DESKTOP-V30A0OF\\SQLEXPRESS;databaseName=OntoDiabetes;";
-		final String user = "sa";
-		final String password = "Password001!";
+
 		String dbNic = "";
 		Boolean present = false;
 		// establish the connection
@@ -319,9 +321,7 @@ public class patientDetails extends HttpServlet {
 	public boolean checkUser(String userId) throws ClassNotFoundException, SQLException {
 		Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 		// variables
-		final String url = "jdbc:sqlserver://DESKTOP-V30A0OF\\SQLEXPRESS;databaseName=OntoDiabetes;";
-		final String user = "sa";
-		final String password = "Password001!";
+	
 		String dbUserId = "";
 		Boolean present = false;
 		// establish the connection
@@ -359,9 +359,7 @@ public class patientDetails extends HttpServlet {
 			SQLException, ParseException, OWLOntologyCreationException, OWLOntologyStorageException {
 		Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 		// variables
-		final String url = "jdbc:sqlserver://DESKTOP-V30A0OF\\SQLEXPRESS;databaseName=OntoDiabetes;";
-		final String user = "sa";
-		final String password = "Password001!";
+
 
 		con = DriverManager.getConnection(url, user, password);
 		try {
@@ -384,6 +382,57 @@ public class patientDetails extends HttpServlet {
 			// adding Data to ontology
 			addPatientToOntology(userid, surname + " " + middlename + " " + lastname, height, weight, bmi, gender,
 					haschild);
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		con.close();
+
+	}
+
+	public void addSymtompsTask(String userid) throws ClassNotFoundException, SQLException, ParseException,
+			OWLOntologyCreationException, OWLOntologyStorageException {
+		Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+		// variables
+
+
+		con = DriverManager.getConnection(url, user, password);
+		try {
+			Statement st = con.createStatement();
+
+			String query = " INSERT INTO [OntoDiabetes_Task]([status],[assign_to],[description],[link]) VALUES('Pending','"
+					+ userid
+					+ "','Please fill in the questionnaire to describe any kind of symptoms you are currently having.','symptoms.jsp')";
+
+			log(query);
+			// send and execute SQL query in Database software
+			st.execute(query);
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		con.close();
+
+	}
+
+	public void addPatientStage(String userid) throws ClassNotFoundException, SQLException, ParseException,
+			OWLOntologyCreationException, OWLOntologyStorageException {
+		Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+		
+		con = DriverManager.getConnection(url, user, password);
+		try {
+			Statement st = con.createStatement();
+
+			String query = " INSERT INTO [OntoDiabetes_PatientStage]([stage],[patient_id]) VALUES('Symptoms','" + userid
+					+ "')";
+
+			log(query);
+			// send and execute SQL query in Database software
+			st.execute(query);
 
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
