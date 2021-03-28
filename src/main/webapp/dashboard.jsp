@@ -188,25 +188,28 @@ final String password = "Password001!";
 								</tr>
 							</tfoot>
 							<tbody>
+
+								<%
+								while (rs.next()) {
+								%>
 								<tr>
-									<%
-									while (rs.next()) {
-									%>
 									<td><%=rs.getString("description")%></td>
 									<td><%=rs.getString("status")%></td>
-									<td ><a href="<%=rs.getString("link")%>" class="fa fa-link"></a></td>
-									<%
-									}
-
-									} catch (Exception e) {
-									%><%=e%>
-									<%
-									}
-
-									con.close();
-									%>
+									<td><a href="<%=rs.getString("link")%>"
+										class="fa fa-link"></a></td>
 
 								</tr>
+								<%
+								}
+
+								} catch (Exception e) {
+								%><%=e%>
+								<%
+								}
+
+								con.close();
+								%>
+
 							</tbody>
 						</table>
 					</div>

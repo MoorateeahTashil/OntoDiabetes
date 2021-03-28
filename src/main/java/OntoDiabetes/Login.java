@@ -58,7 +58,6 @@ public class Login extends HttpServlet {
 		String username = request.getParameter("emailTextBox");
 		String password = request.getParameter("passwordTextBox");
 		
-		username = "patient@gmail.com";
 		password = "Password001!";
 		try {
 			if (ValidateData(username, password)) {
@@ -77,16 +76,36 @@ public class Login extends HttpServlet {
 				    // no session
 				}
 		
-				if(!checkPatientDetails(userID))
+				
+				if(userType.toLowerCase().equals("patient"))
 				{
-					if (userType.toLowerCase().equals("patient")) {
-						response.sendRedirect("patientDetails.jsp");
+					if(!checkPatientDetails(userID))
+					{
+						if (userType.toLowerCase().equals("patient")) {
+							response.sendRedirect("patientDetails.jsp");
+						}
+					}
+					else
+					{
+						RequestDispatcher req = request.getRequestDispatcher("dashboard.jsp");
+						req.forward(request, response);
 					}
 				}
-				else
+			
+				
+				if(userType.toLowerCase().equals("doctor"))
 				{
-					RequestDispatcher req = request.getRequestDispatcher("dashboard.jsp");
-					req.forward(request, response);
+					if(!checkDoctorDetails(userID))
+					{
+						if (userType.toLowerCase().equals("doctor")) {
+							response.sendRedirect("doctorDetails.jsp");
+						}
+					}
+					else
+					{
+						RequestDispatcher req = request.getRequestDispatcher("dashboardDoc.jsp");
+						req.forward(request, response);
+					}
 				}
 				
 
@@ -147,6 +166,43 @@ public class Login extends HttpServlet {
 			Statement st = con.createStatement();
 
 			String query = "select [userid] from [dbo].[OntoDiabetes_PatientDetails] where [userid]='" + userID + "';";
+
+			// send and execute SQL query in Database software
+			ResultSet rs = st.executeQuery(query);
+
+			// process the ResultSet object
+			while (rs.next()) {
+				dbUserId = rs.getString(1);
+			}
+
+			if (dbUserId == null || dbUserId == "") {
+				detailsFilled = false;
+			} else {
+				detailsFilled = true;
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		con.close();
+		return detailsFilled;
+	}
+	
+	
+	
+	public boolean checkDoctorDetails(String userID) throws ClassNotFoundException, SQLException {
+		Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+		// variables
+
+		String dbUserId = "";
+		Boolean detailsFilled = false;
+		// establish the connection
+		con = DriverManager.getConnection(url, user, password);
+		try {
+			Statement st = con.createStatement();
+
+			String query = "select [userid] from [dbo].[OntoDiabetes_DoctorDetails] where [userid]='" + userID + "';";
 
 			// send and execute SQL query in Database software
 			ResultSet rs = st.executeQuery(query);

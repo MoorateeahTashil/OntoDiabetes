@@ -81,9 +81,9 @@ public class Register extends HttpServlet {
 				if (userType.toLowerCase().equals("patient")) {
 					response.sendRedirect("patientDetails.jsp");
 				}
-				else
+				else if(userType.toLowerCase().equals("doctor"))
 				{
-					response.sendRedirect("dashboard.jsp");
+					response.sendRedirect("doctorDetails.jsp");
 				}
 				
 
