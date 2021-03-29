@@ -38,9 +38,12 @@ import jakarta.servlet.http.*;
 @WebServlet("/patientDetails")
 public class patientDetails extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	public final String url = "jdbc:sqlserver://DESKTOP-V30A0OF\\SQLEXPRESS;databaseName=OntoDiabetes;";
-	public final String user = "sa";
-	public final String password = "Password001!";
+	
+	DatabaseConnection db = new DatabaseConnection();
+	
+	public final String url = db.getUrlConnection();
+	public final String user = db.getUser();
+	public final String password = db.getPassword();
 	
 	public static Connection con;
 	public static String errorMessage;
@@ -149,8 +152,7 @@ public class patientDetails extends HttpServlet {
 						mobilenumber, homenumber, worknumber, other, haschild);
 				addSymtompsTask(userID);
 				addPatientStage(userID);
-				RequestDispatcher req = request.getRequestDispatcher("dashboard.jsp");
-				req.include(request, response);
+				response.sendRedirect("dashboard.jsp");
 			} else {
 
 				errorMessage = errorMessage.replace("null", "");
@@ -211,7 +213,7 @@ public class patientDetails extends HttpServlet {
 
 		// Adding an instance to class patient
 		OWLClass patientClass = dataFactory.getOWLClass(":Patient", pm);
-		OWLNamedIndividual patient = dataFactory.getOWLNamedIndividual(":Paitent_" + userId, pm);
+		OWLNamedIndividual patient = dataFactory.getOWLNamedIndividual(":Patient_" + userId, pm);
 
 		OWLClassAssertionAxiom classAssertion = dataFactory.getOWLClassAssertionAxiom(patientClass, patient);
 		ontologyManager.addAxiom(ontology, classAssertion);

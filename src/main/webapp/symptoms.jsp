@@ -9,13 +9,19 @@ if (session.getAttribute("userID") == null) {
 	response.sendRedirect(redirectURL);
 }
 %>
+
+<%@ page import="OntoDiabetes.DatabaseConnection"%>
+
+
 <%
 final Connection con;
 Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 // variables
-final String url = "jdbc:sqlserver://DESKTOP-V30A0OF\\SQLEXPRESS;databaseName=OntoDiabetes;";
-final String user = "sa";
-final String password = "Password001!";
+DatabaseConnection db = new DatabaseConnection();
+
+final String url = db.getUrlConnection();
+final String user = db.getUser();
+final String password = db.getPassword();
 // establish the connection
 %>
 
@@ -187,7 +193,7 @@ final String password = "Password001!";
 										<p>For recently pregnant or pregnant women</p>
 										<div class="form-group">
 											<select id="adverse" name="adverse"
-												class="form-control form-control-dropdown" required>
+												class="form-control form-control-dropdown" >
 												<option value="" disabled selected hidden>Did you
 													have any adverse and unwanted conditions in previous
 													pregnancies?</option>
@@ -200,7 +206,7 @@ final String password = "Password001!";
 
 										<div class="form-group">
 											<select id="miscarriage" name="miscarriage"
-												class="form-control form-control-dropdown" required>
+												class="form-control form-control-dropdown" >
 												<option value="" disabled selected hidden>Did you
 													have any miscarriage in previous pregnancies?</option>
 												<option value="Yes">Yes</option>
@@ -211,7 +217,7 @@ final String password = "Password001!";
 
 										<div class="form-group">
 											<select id="stillbirth" name="stillbirth"
-												class="form-control form-control-dropdown" required>
+												class="form-control form-control-dropdown" >
 												<option value="" disabled selected hidden>Did you
 													have any stillbirth in previous pregnancies?</option>
 												<option value="Yes">Yes</option>

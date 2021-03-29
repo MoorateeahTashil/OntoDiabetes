@@ -22,9 +22,12 @@ import jakarta.servlet.http.*;
 @WebServlet("/Login")
 public class Login extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	public final String url = "jdbc:sqlserver://DESKTOP-V30A0OF\\SQLEXPRESS;databaseName=OntoDiabetes;";
-	public final String user = "sa";
-	public final String password = "Password001!";
+	
+	DatabaseConnection db = new DatabaseConnection();
+	
+	public final String url = db.getUrlConnection();
+	public final String user = db.getUser();
+	public final String password = db.getPassword();
 	
 	public static Connection con;
 	public static String errorMessage;
@@ -87,8 +90,8 @@ public class Login extends HttpServlet {
 					}
 					else
 					{
-						RequestDispatcher req = request.getRequestDispatcher("dashboard.jsp");
-						req.forward(request, response);
+						response.sendRedirect("dashboard.jsp");
+
 					}
 				}
 			
@@ -103,8 +106,8 @@ public class Login extends HttpServlet {
 					}
 					else
 					{
-						RequestDispatcher req = request.getRequestDispatcher("dashboardDoc.jsp");
-						req.forward(request, response);
+						response.sendRedirect("dashboardDoc.jsp");
+
 					}
 				}
 				

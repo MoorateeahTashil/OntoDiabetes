@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
-<%@ include file="masterPage.jsp"%>
+    pageEncoding="ISO-8859-1"%>
+<%@ include file="masterDoc.jsp"%>
 
 <%
 if (session.getAttribute("userID") == null) {
@@ -41,36 +41,52 @@ final String password = db.getPassword();
 		Statement st2 = con.createStatement();
 		Statement st3 = con.createStatement();
 		Statement st4 = con.createStatement();
+		Statement st1 = con.createStatement();
 
-		String query = "select * from [OntoDiabetes_Task] WHERE [assign_to] = " + session.getAttribute("userID") + ";";
-		String CurrentStage = "select * from [OntoDiabetes_PatientStage] WHERE [patient_id] = "
+		String query = "select * from [OntoDiabetes_Task] join OntoDiabetes_Doctor_Patient on OntoDiabetes_Doctor_Patient.patient_id  = [OntoDiabetes_Task].assign_to WHERE to_doc='yes' and doctor_id=" + session.getAttribute("userID") + ";";
+		String countOfPatients = "select count(*) as count from [OntoDiabetes_Doctor_Patient] WHERE [doctor_id] = "
 		+ session.getAttribute("userID") + ";";
-		String NumberOfTasksPending = "select COUNT(*) AS total  from [OntoDiabetes_Task] WHERE Status='Pending'  and [assign_to] = "
+		String NumberOfTasksPending = "select count(*) as count from [OntoDiabetes_Task] join OntoDiabetes_Doctor_Patient on OntoDiabetes_Doctor_Patient.patient_id  = [OntoDiabetes_Task].assign_to WHERE to_doc='yes' and status='Pending' and doctor_id="
 		+ session.getAttribute("userID") + ";";
-		String NumberOfTasks = "select COUNT(*) AS total  from [OntoDiabetes_Task] WHERE  [assign_to] = "
+		String NumberOfTasks = "select count(*) as count from [OntoDiabetes_Task] join OntoDiabetes_Doctor_Patient on OntoDiabetes_Doctor_Patient.patient_id  = [OntoDiabetes_Task].assign_to WHERE to_doc='yes'  and doctor_id="
 		+ session.getAttribute("userID") + ";";
 
+		String numberofDoctors = "select count(*) as count from [OntoDiabetes_User] where type = 'doctor'";
 		// send and execute SQL query in Database software
 		ResultSet rs = st.executeQuery(query);
-		ResultSet rs1 = st2.executeQuery(CurrentStage);
+		ResultSet rs1 = st2.executeQuery(countOfPatients);
 		ResultSet rs2 = st3.executeQuery(NumberOfTasksPending);
 		ResultSet rs3 = st4.executeQuery(NumberOfTasks);
+		ResultSet rs4 = st1.executeQuery(numberofDoctors);
 
 		int numberTaskP = 0;
 		int numberTask = 0;
+		int numDoc = 0;
 		while (rs1.next()) {
-			CurrentStage = rs1.getString("stage");
+			countOfPatients = rs1.getString("count");
 		}
 
 		while (rs2.next()) {
-			numberTaskP = rs2.getInt("total");
+			numberTaskP = rs2.getInt("count");
 		}
 
 		while (rs3.next()) {
-			numberTask = rs3.getInt("total");
+			numberTask = rs3.getInt("count");
 		}
-
-		float percentage = 100 - (((float)numberTaskP / (float) numberTask) * 100);
+		
+		while (rs4.next()) {
+			numDoc = rs4.getInt("count");
+		}
+		
+		
+		
+		float percentage = 0;
+		if(numberTask > 0)
+		{
+			percentage = 100 - (( (float) numberTaskP / (float) numberTask) * 100);
+		}
+		
+		
 	%>
 
 	<div class="row">
@@ -83,8 +99,8 @@ final String password = db.getPassword();
 						<div class="col mr-2">
 							<div
 								class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-								Current Stage</div>
-							<div class="h5 mb-0 font-weight-bold text-gray-800"><%=CurrentStage%></div>
+								Number of Patients</div>
+							<div class="h5 mb-0 font-weight-bold text-gray-800"><%=countOfPatients%></div>
 						</div>
 						<div class="col-auto">
 							<i class="fas fa-briefcase-medical fa-2x text-gray-300"></i>
@@ -102,11 +118,11 @@ final String password = db.getPassword();
 						<div class="col mr-2">
 							<div
 								class="text-xs font-weight-bold text-success text-uppercase mb-1">
-								Earnings (Annual)</div>
-							<div class="h5 mb-0 font-weight-bold text-gray-800">$215,000</div>
+								Number of Doctors</div>
+							<div class="h5 mb-0 font-weight-bold text-gray-800"><%=numDoc%></div>
 						</div>
 						<div class="col-auto">
-							<i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+							<i class="fas fa-user-md fa-2x text-gray-300"></i>
 						</div>
 					</div>
 				</div>
@@ -227,4 +243,4 @@ final String password = db.getPassword();
 </div>
 
 
-<%@ include file="masterPage2.jsp"%>
+<%@ include file="masterDoc2.jsp"%>

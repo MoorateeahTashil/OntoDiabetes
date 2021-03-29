@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,10 +18,11 @@
 <%@page import="java.sql.Connection"%>
 
 
-
-<!-- Custom fonts for this template-->
 <link
 	href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+	rel="stylesheet" />
+<!-- Custom fonts for this template-->
+<link
 	rel="stylesheet" />
 <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet"
 	type="text/css">
@@ -48,7 +49,14 @@ body {
 	font-weight: bold;
 }
 
-
+.card-headerss {
+	padding: .75rem 1.25rem;
+	margin-bottom: 0;
+	background-color: #77dd77;
+	border-bottom: 1px solid #e3e6f0;
+	color: white;
+	font-weight: bold;
+}
 .badge {
   padding: 0.5em 0.75em;
 }
@@ -80,7 +88,7 @@ body {
 			<!-- Sidebar - Brand -->
 			<a
 				class="sidebar-brand d-flex align-items-center justify-content-center"
-				href="dashboard.jsp">
+				href="dashboardDoc.jsp">
 				<div class="sidebar-brand-icon rotate-n-15">
 					<i class="fas fa-heartbeat"></i>
 				</div>
@@ -92,7 +100,7 @@ body {
 
 			<!-- Nav Item - Dashboard -->
 			<li class="nav-item <% if (request.getRequestURL().toString().contains("dashboard")){%>active<%}  %>"><a class="nav-link"
-				href="dashboard.jsp"> <i class="fas fa-fw fa-tachometer-alt"></i> <span>Dashboard</span></a>
+				href="dashboardDoc.jsp"> <i class="fas fa-fw fa-tachometer-alt"></i> <span>Dashboard</span></a>
 			</li>
 
 			<!-- Divider -->
@@ -100,10 +108,14 @@ body {
 
 			<div class="sidebar-heading">Patient</div>
 			<!-- Nav Item - Charts -->
-			<li class="nav-item <% if (request.getRequestURL().toString().contains("symptoms")){%>active<%}  %>"><a class="nav-link " href="symptoms.jsp">
-					<i class="fa fa-stethoscope"></i> <span>Symptoms</span>
+			<li class="nav-item <% if (request.getRequestURL().toString().contains("assignPatient")){%>active<%}  %>"><a class="nav-link " href="assignPatient.jsp">
+					<i class="fas fa-file-medical-alt"></i> <span>Assign Patients</span>
 			</a></li>
 
+
+			<li class="nav-item <% if (request.getRequestURL().toString().contains("reviewPatientSymptomps")){%>active<%}  %>"><a class="nav-link " href="viewPatient.jsp">
+					<i class="fas fa-procedures"></i> <span>View Patient</span>
+			</a></li>
 
 
 		</ul>

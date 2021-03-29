@@ -9,8 +9,6 @@ import java.sql.Statement;
 import java.text.ParseException;
 
 import org.semanticweb.owlapi.apibinding.OWLManager;
-import org.semanticweb.owlapi.model.OWLClass;
-import org.semanticweb.owlapi.model.OWLClassAssertionAxiom;
 import org.semanticweb.owlapi.model.OWLDataFactory;
 import org.semanticweb.owlapi.model.OWLDataProperty;
 import org.semanticweb.owlapi.model.OWLDataPropertyAssertionAxiom;
@@ -34,9 +32,12 @@ import jakarta.servlet.http.*;
 public class symptoms extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	public static Connection con;
-	public final String url = "jdbc:sqlserver://DESKTOP-V30A0OF\\SQLEXPRESS;databaseName=OntoDiabetes;";
-	public final String user = "sa";
-	public final String password = "Password001!";
+
+	DatabaseConnection db = new DatabaseConnection();
+
+	public final String url = db.getUrlConnection();
+	public final String user = db.getUser();
+	public final String password = db.getPassword();
 
 	/**
 	 * Default constructor.
@@ -96,13 +97,16 @@ public class symptoms extends HttpServlet {
 		try {
 			saveSymptoms(userID, tension, fatigue, hunger, lossweight, vision, tingling, patches, infections, healing,
 					relative, polyuria, polydipsia, adverse, miscarriage, stillbirth);
-			
-			addSymptomsToOntology(userID, tension, fatigue, hunger, lossweight, vision, tingling, patches, infections, healing,
-					relative, polyuria, polydipsia, adverse, miscarriage, stillbirth);
-			
+
+			addSymptomsToOntology(userID, tension, fatigue, hunger, lossweight, vision, tingling, patches, infections,
+					healing, relative, polyuria, polydipsia, adverse, miscarriage, stillbirth);
+
 			addDoctorReviewTask(userID);
 			updateTask(userID);
 			updateStage(userID);
+
+			response.sendRedirect("dashboard.jsp");
+
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -122,13 +126,10 @@ public class symptoms extends HttpServlet {
 
 	}
 
-	
-	
 	public void addSymptomsToOntology(String userid, String tension, String fatigue, String hunger, String lossweight,
 			String vison, String tingling, String patches, String infections, String healing, String relative,
 			String polyuria, String polydipsia, String adverse, String miscarriage, String stillbirth)
 			throws ClassNotFoundException, SQLException, OWLOntologyCreationException, OWLOntologyStorageException {
-
 
 		OWLOntologyManager ontologyManager = OWLManager.createOWLOntologyManager();
 		OWLOntology ontology = ontologyManager
@@ -138,113 +139,98 @@ public class symptoms extends HttpServlet {
 		OWLDataFactory dataFactory = OWLManager.getOWLDataFactory();
 
 		// Adding an instance to class patient
-		OWLNamedIndividual patient = dataFactory.getOWLNamedIndividual(":Paitent_" + userid, pm);
+		OWLNamedIndividual patient = dataFactory.getOWLNamedIndividual(":Patient_" + userid, pm);
 
 		XMLWriterPreferences.getInstance().setUseNamespaceEntities(true);
 
 		// tension
 		OWLDataProperty hastension = dataFactory.getOWLDataProperty(":hasTension", pm);
-		OWLDataPropertyAssertionAxiom tensionPropertyAssertion = dataFactory.getOWLDataPropertyAssertionAxiom(hastension,
-				patient, tension);
+		OWLDataPropertyAssertionAxiom tensionPropertyAssertion = dataFactory
+				.getOWLDataPropertyAssertionAxiom(hastension, patient, tension);
 		ontologyManager.addAxiom(ontology, tensionPropertyAssertion);
-		
-		
+
 		// Fatigue
 		OWLDataProperty hasFatigue = dataFactory.getOWLDataProperty(":hasFatigue", pm);
-		OWLDataPropertyAssertionAxiom fatiguePropertyAssertion = dataFactory.getOWLDataPropertyAssertionAxiom(hasFatigue,
-				patient, fatigue);
+		OWLDataPropertyAssertionAxiom fatiguePropertyAssertion = dataFactory
+				.getOWLDataPropertyAssertionAxiom(hasFatigue, patient, fatigue);
 		ontologyManager.addAxiom(ontology, fatiguePropertyAssertion);
-		
-		
+
 		// hunger
 		OWLDataProperty hasHunger = dataFactory.getOWLDataProperty(":hasHunger", pm);
 		OWLDataPropertyAssertionAxiom hungerPropertyAssertion = dataFactory.getOWLDataPropertyAssertionAxiom(hasHunger,
 				patient, hunger);
 		ontologyManager.addAxiom(ontology, hungerPropertyAssertion);
-		
-		
-		
+
 		// lossweight
 		OWLDataProperty hasLossWeight = dataFactory.getOWLDataProperty(":hasLossWeight", pm);
-		OWLDataPropertyAssertionAxiom lossWeightPropertyAssertion = dataFactory.getOWLDataPropertyAssertionAxiom(hasLossWeight,
-				patient, lossweight);
+		OWLDataPropertyAssertionAxiom lossWeightPropertyAssertion = dataFactory
+				.getOWLDataPropertyAssertionAxiom(hasLossWeight, patient, lossweight);
 		ontologyManager.addAxiom(ontology, lossWeightPropertyAssertion);
-		
 
 		// vison
 		OWLDataProperty hasBlurredVision = dataFactory.getOWLDataProperty(":hasBlurredVision", pm);
-		OWLDataPropertyAssertionAxiom visionPropertyAssertion = dataFactory.getOWLDataPropertyAssertionAxiom(hasBlurredVision,
-				patient, vison);
+		OWLDataPropertyAssertionAxiom visionPropertyAssertion = dataFactory
+				.getOWLDataPropertyAssertionAxiom(hasBlurredVision, patient, vison);
 		ontologyManager.addAxiom(ontology, visionPropertyAssertion);
-		
-		//tingling
-		OWLDataProperty hasTinglingHandsAndFeet = dataFactory.getOWLDataProperty(":hasTinglingHandsAndFeet", pm);
-		OWLDataPropertyAssertionAxiom tinglingPropertyAssertion = dataFactory.getOWLDataPropertyAssertionAxiom(hasTinglingHandsAndFeet,
-				patient, tingling);
-		ontologyManager.addAxiom(ontology, tinglingPropertyAssertion);
-		
-		
-		//patches
-		
-		OWLDataProperty hasDarkPatches = dataFactory.getOWLDataProperty(":hasDarkPatches", pm);
-		OWLDataPropertyAssertionAxiom patchesPropertyAssertion = dataFactory.getOWLDataPropertyAssertionAxiom(hasDarkPatches,
-				patient, patches);
-		ontologyManager.addAxiom(ontology, patchesPropertyAssertion);
-		
-		//infections
-		OWLDataProperty hasInfection = dataFactory.getOWLDataProperty(":hasInfection", pm);
-		OWLDataPropertyAssertionAxiom infectionPropertyAssertion = dataFactory.getOWLDataPropertyAssertionAxiom(hasInfection,
-				patient, infections);
-		ontologyManager.addAxiom(ontology, infectionPropertyAssertion);
-		
-		
-		//healing
-		OWLDataProperty hasSlowHealing = dataFactory.getOWLDataProperty(":hasSlowHealing", pm);
-		OWLDataPropertyAssertionAxiom healingPropertyAssertion = dataFactory.getOWLDataPropertyAssertionAxiom(hasSlowHealing,
-				patient, healing);
-		ontologyManager.addAxiom(ontology, healingPropertyAssertion);
-		
-		
-		
-		//relative
-		OWLDataProperty hasFirstDegreeRelative = dataFactory.getOWLDataProperty(":hasFirstDegreeRelative", pm);
-		OWLDataPropertyAssertionAxiom relativePropertyAssertion = dataFactory.getOWLDataPropertyAssertionAxiom(hasFirstDegreeRelative,
-				patient, relative);
-		ontologyManager.addAxiom(ontology, relativePropertyAssertion);
-		
 
-		
-		//polyuria
+		// tingling
+		OWLDataProperty hasTinglingHandsAndFeet = dataFactory.getOWLDataProperty(":hasTinglingHandsAndFeet", pm);
+		OWLDataPropertyAssertionAxiom tinglingPropertyAssertion = dataFactory
+				.getOWLDataPropertyAssertionAxiom(hasTinglingHandsAndFeet, patient, tingling);
+		ontologyManager.addAxiom(ontology, tinglingPropertyAssertion);
+
+		// patches
+
+		OWLDataProperty hasDarkPatches = dataFactory.getOWLDataProperty(":hasDarkPatches", pm);
+		OWLDataPropertyAssertionAxiom patchesPropertyAssertion = dataFactory
+				.getOWLDataPropertyAssertionAxiom(hasDarkPatches, patient, patches);
+		ontologyManager.addAxiom(ontology, patchesPropertyAssertion);
+
+		// infections
+		OWLDataProperty hasInfection = dataFactory.getOWLDataProperty(":hasInfection", pm);
+		OWLDataPropertyAssertionAxiom infectionPropertyAssertion = dataFactory
+				.getOWLDataPropertyAssertionAxiom(hasInfection, patient, infections);
+		ontologyManager.addAxiom(ontology, infectionPropertyAssertion);
+
+		// healing
+		OWLDataProperty hasSlowHealing = dataFactory.getOWLDataProperty(":hasSlowHealing", pm);
+		OWLDataPropertyAssertionAxiom healingPropertyAssertion = dataFactory
+				.getOWLDataPropertyAssertionAxiom(hasSlowHealing, patient, healing);
+		ontologyManager.addAxiom(ontology, healingPropertyAssertion);
+
+		// relative
+		OWLDataProperty hasFirstDegreeRelative = dataFactory.getOWLDataProperty(":hasFirstDegreeRelative", pm);
+		OWLDataPropertyAssertionAxiom relativePropertyAssertion = dataFactory
+				.getOWLDataPropertyAssertionAxiom(hasFirstDegreeRelative, patient, relative);
+		ontologyManager.addAxiom(ontology, relativePropertyAssertion);
+
+		// polyuria
 		OWLDataProperty hasPolyuria = dataFactory.getOWLDataProperty(":hasPolyuria", pm);
-		OWLDataPropertyAssertionAxiom polyuriaPropertyAssertion = dataFactory.getOWLDataPropertyAssertionAxiom(hasPolyuria,
-				patient, polyuria);
+		OWLDataPropertyAssertionAxiom polyuriaPropertyAssertion = dataFactory
+				.getOWLDataPropertyAssertionAxiom(hasPolyuria, patient, polyuria);
 		ontologyManager.addAxiom(ontology, polyuriaPropertyAssertion);
-		
-		
-		//polydipsia
+
+		// polydipsia
 		OWLDataProperty hasPolydipsia = dataFactory.getOWLDataProperty(":hasPolydipsia", pm);
-		OWLDataPropertyAssertionAxiom polydipsiaPropertyAssertion = dataFactory.getOWLDataPropertyAssertionAxiom(hasPolydipsia,
-				patient, polyuria);
+		OWLDataPropertyAssertionAxiom polydipsiaPropertyAssertion = dataFactory
+				.getOWLDataPropertyAssertionAxiom(hasPolydipsia, patient, polydipsia);
 		ontologyManager.addAxiom(ontology, polydipsiaPropertyAssertion);
-		
-		
+
 		String ObsetricHistory = "no";
-		if(stillbirth.toLowerCase().equals("yes") || stillbirth.toLowerCase().equals("yes") ||  stillbirth.toLowerCase().equals("yes"))
-		{
+		if (stillbirth.toLowerCase().equals("yes") || stillbirth.toLowerCase().equals("yes")
+				|| stillbirth.toLowerCase().equals("yes")) {
 			ObsetricHistory = "yes";
 		}
-		//ObsetricHistory
+		// ObsetricHistory
 		OWLDataProperty hasObsetricHistory = dataFactory.getOWLDataProperty(":hasObsetricHistory", pm);
-		OWLDataPropertyAssertionAxiom obPropertyAssertion = dataFactory.getOWLDataPropertyAssertionAxiom(hasPolydipsia,
-				patient, polyuria);
+		OWLDataPropertyAssertionAxiom obPropertyAssertion = dataFactory
+				.getOWLDataPropertyAssertionAxiom(hasObsetricHistory, patient, ObsetricHistory);
 		ontologyManager.addAxiom(ontology, obPropertyAssertion);
-		
-		
-		
+
 		ontologyManager.saveOntology(ontology);
 
 	}
-	
+
 	public void saveSymptoms(String userid, String tension, String fatigue, String hunger, String lossweight,
 			String vison, String tingling, String patches, String infections, String healing, String relative,
 			String polyuria, String polydipsia, String adverse, String miscarriage, String stillbirth)
@@ -288,9 +274,10 @@ public class symptoms extends HttpServlet {
 		try {
 			Statement st = con.createStatement();
 
-			String query = " INSERT INTO [OntoDiabetes_Task]([status],[assign_to],[description],[link]) VALUES('Pending','"
+			String query = " INSERT INTO [OntoDiabetes_Task]([status],[assign_to],[description],[link] ,[to_doc]) VALUES('Pending','"
 					+ userid
-					+ "','Your symptoms has been submitted and your doctor will follow up with you. Kindly wait','dashboard.jsp')";
+					+ "','Your symptoms has been submitted and your doctor will follow up with you. Kindly wait','reviewPatientSymptoms.jsp?patientid="
+					+ userid + "','yes')";
 
 			log(query);
 			// send and execute SQL query in Database software

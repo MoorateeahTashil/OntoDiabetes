@@ -19,9 +19,12 @@ import jakarta.servlet.http.*;
 @WebServlet("/doctorDetails")
 public class doctorDetails extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	public final String url = "jdbc:sqlserver://DESKTOP-V30A0OF\\SQLEXPRESS;databaseName=OntoDiabetes;";
-	public final String user = "sa";
-	public final String password = "Password001!";
+	
+	DatabaseConnection db = new DatabaseConnection();
+	
+	public final String url = db.getUrlConnection();
+	public final String user = db.getUser();
+	public final String password = db.getPassword();;
 
 	public static Connection con;
 	public static String errorMessage;
@@ -110,8 +113,8 @@ public class doctorDetails extends HttpServlet {
 					saveDoctor(userID, surname, middlename, forename, other, mobilenumber, homenumber, worknumber,reg, prof,dob);
 			
 
-				RequestDispatcher req = request.getRequestDispatcher("dashboardDoc.jsp");
-				req.include(request, response);
+					response.sendRedirect("dashboardDoc.jsp");
+
 			} else {
 
 				errorMessage = errorMessage.replace("null", "");
