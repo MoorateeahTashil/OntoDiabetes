@@ -32,7 +32,6 @@ public class DbConnect {
 		// Create OWLOntology instance using the OWLAPI
 		
 		
-		Ontology o = new Ontology();
 		
 		
 //		OWLOntologyManager ontologyManager = OWLManager.createOWLOntologyManager();

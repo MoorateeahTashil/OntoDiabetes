@@ -74,6 +74,7 @@ public class Login extends HttpServlet {
 				    // a session exists
 					session.setAttribute("userID", userID);
 					session.setAttribute("userType", userType);
+					session.setMaxInactiveInterval(600);
 
 				} else {
 				    // no session

@@ -5,21 +5,18 @@
 
 <%
 if (session.getAttribute("userID") == null) {
-
 	String redirectURL = "sessionExpired.jsp";
 	response.sendRedirect(redirectURL);
+} else {
+	if (session.getAttribute("userType").toString().toLowerCase().equals("patient")) {
+
+		String redirectURL = "noAccess.jsp";
+		response.sendRedirect(redirectURL);
+
+	}
 }
 %>
 
-
-
-<%
-if (session.getAttribute("userType").toString().toLowerCase().equals("patient")) {
-
-	String redirectURL = "noAccess.jsp";
-	response.sendRedirect(redirectURL);
-}
-%>
 
 
 <%
@@ -31,7 +28,6 @@ DatabaseConnection db = new DatabaseConnection();
 final String url = db.getUrlConnection();
 final String user = db.getUser();
 final String password = db.getPassword();
-
 
 String id = "";
 String name = "";
@@ -127,7 +123,8 @@ con.close();
 							<div class="offset-lg-1 col-lg-9">
 								<div class="p-5">
 									<form class="user" action="reviewPatientSymptoms" method="post">
-										<input type="text"	id="patientID" name="patientID" style="display:none;" value="<%=id%>">
+										<input type="text" id="patientID" name="patientID"
+											style="display: none;" value="<%=id%>">
 
 
 										<div class="form-group">
@@ -334,7 +331,8 @@ con.close();
 										</div>
 
 										<%
-										String message = (String) request.getAttribute("errorMessage");
+										String message = (String) session.getAttribute("errorMessage");
+										session.removeAttribute("errorMessage");
 										%>
 
 
@@ -347,7 +345,8 @@ con.close();
 										<div class="card mb-4">
 											<div class="card-headerss">No Symptoms</div>
 											<div class="card-body">
-												<p ID="errorMessageLabel" />Patient has no symptoms related to diabetes.
+												<p ID="errorMessageLabel" />
+												Patient has no symptoms related to diabetes.
 											</div>
 										</div>
 										<%
@@ -372,7 +371,30 @@ con.close();
 											class="btn btn-primary btn-user btn-block"
 											value="Automatic Processing" />
 									</form>
+									<br />
+									<%
+									if (message == null || message.isEmpty()) {
+									} else {
+									%>
+									<form class="user" action="doTest" method="post">
+									<input type="text" id="patient_ID" name="patient_ID"
+											style="display: none;" value="<%=id%>">
+										<div class="form-group">
+											<select id="Tests" name="Tests"
+												class="form-control form-control-dropdown" required>
+												<option value="" disabled selected hidden>Should
+													the patient do plasma glucose test (FPG)?</option>
+												<option value="Yes">Yes</option>
+												<option value="No">No</option>
+											</select>
+										</div>
 
+										<input type="submit" ID="buttonSave1"
+											class="btn btn-primary btn-user btn-block" value="Save" />
+									</form>
+									<%
+									}
+									%>
 								</div>
 							</div>
 						</div>

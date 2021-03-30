@@ -41,6 +41,7 @@ final String password = db.getPassword();
 		Statement st2 = con.createStatement();
 		Statement st3 = con.createStatement();
 		Statement st4 = con.createStatement();
+		Statement st5 = con.createStatement();
 
 		String query = "select * from [OntoDiabetes_Task] WHERE [assign_to] = " + session.getAttribute("userID") + ";";
 		String CurrentStage = "select * from [OntoDiabetes_PatientStage] WHERE [patient_id] = "
@@ -49,12 +50,16 @@ final String password = db.getPassword();
 		+ session.getAttribute("userID") + ";";
 		String NumberOfTasks = "select COUNT(*) AS total  from [OntoDiabetes_Task] WHERE  [assign_to] = "
 		+ session.getAttribute("userID") + ";";
+		
+		
+		String DoctorName = "select surname+ ' ' + ISNULL(middlename,'') + ' ' + lastname as name from OntoDiabetes_DoctorDetails join OntoDiabetes_Doctor_Patient on OntoDiabetes_DoctorDetails.userid = OntoDiabetes_Doctor_Patient.doctor_id where patient_id = "+ session.getAttribute("userID") + ";";
 
 		// send and execute SQL query in Database software
 		ResultSet rs = st.executeQuery(query);
 		ResultSet rs1 = st2.executeQuery(CurrentStage);
 		ResultSet rs2 = st3.executeQuery(NumberOfTasksPending);
 		ResultSet rs3 = st4.executeQuery(NumberOfTasks);
+		ResultSet rs4 = st5.executeQuery(DoctorName);
 
 		int numberTaskP = 0;
 		int numberTask = 0;
@@ -68,6 +73,15 @@ final String password = db.getPassword();
 
 		while (rs3.next()) {
 			numberTask = rs3.getInt("total");
+		}
+		
+		while (rs4.next()) {
+			DoctorName = rs4.getString("name");
+		}
+		
+		if(DoctorName == null || DoctorName == "")
+		{
+			DoctorName = "Not yet Assigned";
 		}
 
 		float percentage = 100 - (((float)numberTaskP / (float) numberTask) * 100);
@@ -102,11 +116,11 @@ final String password = db.getPassword();
 						<div class="col mr-2">
 							<div
 								class="text-xs font-weight-bold text-success text-uppercase mb-1">
-								Earnings (Annual)</div>
-							<div class="h5 mb-0 font-weight-bold text-gray-800">$215,000</div>
+								Doctor Assigned</div>
+							<div class="h5 mb-0 font-weight-bold text-gray-800"><%=DoctorName%></div>
 						</div>
 						<div class="col-auto">
-							<i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+							<i class="fas fa-user-md fa-2x text-gray-300"></i>
 						</div>
 					</div>
 				</div>
