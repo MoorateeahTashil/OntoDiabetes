@@ -15,7 +15,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="shortcut icon" type="image/x-icon" href="Images/medical.ico" />
-<title>OntoDiabetes</title>
+<title>MAUDiabetes</title>
 
 
 <!-- Custom fonts for this template-->
@@ -71,7 +71,7 @@ body {
 								<div class="p-5">
 									<div class="text-center">
 										<h1 class="h4 text-gray-900 mb-4">Welcome Back to
-											OntoDiabetes!</h1>
+											MAUDiabetes!</h1>
 									</div>
 
 									<form action="Login" method="post">
@@ -91,8 +91,8 @@ body {
 											</div>
 
 											<%
-											String message = (String)request.getAttribute("errorMessage");
-
+											String message = (String) session.getAttribute("errorMessage");
+											session.removeAttribute("errorMessage");
 											%>
 
 

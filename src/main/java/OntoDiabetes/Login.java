@@ -60,7 +60,7 @@ public class Login extends HttpServlet {
 			throws ServletException, IOException {
 		String username = request.getParameter("emailTextBox");
 		String password = request.getParameter("passwordTextBox");
-		
+		errorMessage = "";
 		password = "Password001!";
 		try {
 			if (ValidateData(username, password)) {
@@ -115,11 +115,13 @@ public class Login extends HttpServlet {
 
 			} else {
 				errorMessage = errorMessage.replace("null", "");
-				request.setAttribute("errorMessage", errorMessage);
-				RequestDispatcher req = request.getRequestDispatcher("login.jsp");
-				req.include(request, response);
+				HttpSession session = request.getSession(false);
+
+				session.setAttribute("errorMessage", errorMessage);
+				
+				response.sendRedirect("login.jsp");
 			}
-		} catch (ClassNotFoundException | SQLException | ServletException | IOException e) {
+		} catch (ClassNotFoundException | SQLException | IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}

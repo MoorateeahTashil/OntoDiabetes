@@ -11,7 +11,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="shortcut icon" type="image/x-icon" href="Images/medical.ico" />
-<title>OntoDiabetes</title>
+<title>MAUDiabetes</title>
 <%@page import="java.sql.DriverManager"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
@@ -92,7 +92,7 @@ body {
 				<div class="sidebar-brand-icon rotate-n-15">
 					<i class="fas fa-heartbeat"></i>
 				</div>
-				<div class="sidebar-brand-text mx-3">OntoDiabetes</div>
+				<div class="sidebar-brand-text mx-3">MAUDiabetes</div>
 			</a>
 
 			<!-- Divider -->

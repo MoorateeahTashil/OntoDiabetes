@@ -84,7 +84,7 @@ final String password = db.getPassword();
 			DoctorName = "Not yet Assigned";
 		}
 
-		float percentage = 100 - (((float)numberTaskP / (float) numberTask) * 100);
+		float percentage = Math.round(100 - (((float)numberTaskP / (float) numberTask) * 100));
 	%>
 
 	<div class="row">

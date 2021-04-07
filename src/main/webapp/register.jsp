@@ -13,7 +13,7 @@
 <meta name="author" content="">
 <link rel="shortcut icon" type="image/x-icon"
 	href="Images/Icons/medical.ico" />
-<title>OntoDiabetes</title>
+<title>MAUDiabetes</title>
 
 
 <!-- Custom fonts for this template-->
