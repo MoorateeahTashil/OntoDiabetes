@@ -100,7 +100,7 @@ con.close();
 				<div class="card shadow mb-4">
 					<div class="card-header py-3">
 						<h6 class="m-0 font-weight-bold text-primary">Review Patient
-							Symptoms</h6>
+							Test</h6>
 					</div>
 					<div class="card-body">
 
@@ -198,7 +198,7 @@ con.close();
 											<div class="card-headerss">No Symptoms</div>
 											<div class="card-body">
 												<p ID="errorMessageLabel" />
-												Patient has no symptoms related to diabetes.
+												Patient has <b>NOT</b> been diagnosed with diabetes and neither with other complications.
 											</div>
 										</div>
 										<%
@@ -206,8 +206,7 @@ con.close();
 										%>
 
 										<div class="card mb-4">
-											<div class="card-headers">Reasons why patient need to
-												take plasma glucose test (FPG)</div>
+											<div class="card-headers">Results</div>
 											<div class="card-body">
 												<p ID="errorMessageLabel" /><%=message%>
 											</div>
@@ -228,20 +227,14 @@ con.close();
 									if (message == null || message.isEmpty()) {
 									} else {
 									%>
-									<form class="user" action="doTest" method="post">
+									<form class="user" action="reviewTest" method="get">
 									<input type="text" id="patient_ID" name="patient_ID"
 											style="display: none;" value="<%=id%>">
-										<div class="form-group">
-											<select id="Tests" name="Tests"
-												class="form-control form-control-dropdown" required>
-												<option value="" disabled selected hidden>Notify the patient?</option>
-												<option value="Yes">Yes</option>
-												<option value="No">No</option>
-											</select>
-										</div>
+								<input type="text" id="messages" name="messages"
+											style="display: none;" value="<%=message%>">
 
 										<input type="submit" ID="buttonSave1"
-											class="btn btn-primary btn-user btn-block" value="Save" />
+											class="btn btn-primary btn-user btn-block" value="Notify the patient" />
 									</form>
 									<%
 									}
