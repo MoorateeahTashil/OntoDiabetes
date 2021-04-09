@@ -13,6 +13,8 @@ import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.model.OWLClass;
 import org.semanticweb.owlapi.model.OWLClassAssertionAxiom;
 import org.semanticweb.owlapi.model.OWLDataFactory;
+import org.semanticweb.owlapi.model.OWLDataProperty;
+import org.semanticweb.owlapi.model.OWLDataPropertyAssertionAxiom;
 import org.semanticweb.owlapi.model.OWLNamedIndividual;
 import org.semanticweb.owlapi.model.OWLOntology;
 import org.semanticweb.owlapi.model.OWLOntologyCreationException;
@@ -21,6 +23,9 @@ import org.semanticweb.owlapi.model.OWLOntologyStorageException;
 import org.semanticweb.owlapi.model.PrefixManager;
 import org.semanticweb.owlapi.rdf.rdfxml.renderer.XMLWriterPreferences;
 import org.semanticweb.owlapi.util.DefaultPrefixManager;
+import org.swrlapi.core.SWRLAPIRule;
+import org.swrlapi.core.SWRLRuleEngine;
+import org.swrlapi.exceptions.SWRLBuiltInException;
 import org.swrlapi.factory.SWRLAPIFactory;
 import org.swrlapi.parser.SWRLParseException;
 import org.swrlapi.sqwrl.SQWRLQueryEngine;
@@ -79,8 +84,9 @@ public class reviewTest extends HttpServlet {
 				updateStage(id, "Treatment Phase(Diagnosed with Diabetes)");
 				addTask(id, "Pending", "You have been diagnosed with diabetes. We will start your treatment plan.",
 						"treatment.jsp?patientID=" + id);
+				inferDiabetes(id);
 			} catch (ClassNotFoundException | SQLException | OWLOntologyCreationException | OWLOntologyStorageException
-					| ParseException e) {
+					| ParseException | SWRLParseException | SWRLBuiltInException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
@@ -89,7 +95,8 @@ public class reviewTest extends HttpServlet {
 		else if (messages.contains("Impaired Glucose Tolerance")) {
 			try {
 				updateStage(id, "Impaired Glucose Tolerance (Not diagnosed with Diabetes)");
-				addTask(id, "Completed", "You have been not diagnosed with diabetes but you have Impaired Glucose Tolerance.Glucose intolerance can be treated through diet and lifestyle changes or with assistance from anti-diabetic medication, such as tablets and/or insulin.",
+				addTask(id, "Completed",
+						"You have been not diagnosed with diabetes but you have Impaired Glucose Tolerance.Glucose intolerance can be treated through diet and lifestyle changes or with assistance from anti-diabetic medication, such as tablets and/or insulin.",
 						"dashboard.jsp");
 			} catch (ClassNotFoundException | SQLException | OWLOntologyCreationException | OWLOntologyStorageException
 					| ParseException e) {
@@ -101,7 +108,8 @@ public class reviewTest extends HttpServlet {
 		else if (messages.contains("Impaired Fasting Glycaemia")) {
 			try {
 				updateStage(id, "Impaired Fasting Glycaemia (Not diagnosed with Diabetes)");
-				addTask(id, "Completed", "You have been not diagnosed with diabetes but you have Impaired Fasting Glycaemia.Impaired Fasting Glycaemia can be treated through diet and lifestyle changes or with assistance from anti-diabetic medication, such as Metformin  and/or Rosiglitazone.",
+				addTask(id, "Completed",
+						"You have been not diagnosed with diabetes but you have Impaired Fasting Glycaemia.Impaired Fasting Glycaemia can be treated through diet and lifestyle changes or with assistance from anti-diabetic medication, such as Metformin  and/or Rosiglitazone.",
 						"dashboard.jsp");
 			} catch (ClassNotFoundException | SQLException | OWLOntologyCreationException | OWLOntologyStorageException
 					| ParseException e) {
@@ -111,7 +119,8 @@ public class reviewTest extends HttpServlet {
 		} else {
 			try {
 				updateStage(id, "Not diagnosed with Diabetes)");
-				addTask(id, "Completed", "You have been not diagnosed with diabetes. We advise you to cut sugar and refined carbohydrates from your diet , eat balanced diet ,quit smoking , drink water and eat fibers and exercise.",
+				addTask(id, "Completed",
+						"You have been not diagnosed with diabetes. We advise you to cut sugar and refined carbohydrates from your diet , eat balanced diet ,quit smoking , drink water and eat fibers and exercise.",
 						"dashboard.jsp");
 			} catch (ClassNotFoundException | SQLException | OWLOntologyCreationException | OWLOntologyStorageException
 					| ParseException e) {
@@ -316,6 +325,38 @@ public class reviewTest extends HttpServlet {
 		}
 
 		con.close();
+
+	}
+
+	public void inferDiabetes(String userId) throws SWRLParseException, SWRLBuiltInException, OWLOntologyCreationException, OWLOntologyStorageException {
+
+		OWLOntologyManager ontologyManager = OWLManager.createOWLOntologyManager();
+		OWLOntology ontology = ontologyManager
+				.loadOntologyFromOntologyDocument(new File(getServletContext().getRealPath("Diabetes.owl")));
+		String base = "http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#";
+		PrefixManager pm = new DefaultPrefixManager(null, null, base);
+		OWLDataFactory dataFactory = OWLManager.getOWLDataFactory();
+
+		// Adding an instance to class patient
+		OWLClass patientClass = dataFactory.getOWLClass(":Patient", pm);
+		OWLNamedIndividual patient = dataFactory.getOWLNamedIndividual(":Patient_" + userId, pm);
+
+		OWLClassAssertionAxiom classAssertion = dataFactory.getOWLClassAssertionAxiom(patientClass, patient);
+		ontologyManager.addAxiom(ontology, classAssertion);
+
+		XMLWriterPreferences.getInstance().setUseNamespaceEntities(true);
+
+		// Adding Data Property
+
+		// USERID
+		OWLDataProperty hasPatientID = dataFactory.getOWLDataProperty(":hasDiabetes", pm);
+		OWLDataPropertyAssertionAxiom idPropertyAssertion = dataFactory.getOWLDataPropertyAssertionAxiom(hasPatientID,
+				patient, true);
+		ontologyManager.addAxiom(ontology, idPropertyAssertion);
+
+
+		
+		ontologyManager.saveOntology(ontology);
 
 	}
 

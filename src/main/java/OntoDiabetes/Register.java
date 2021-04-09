@@ -93,11 +93,13 @@ public class Register extends HttpServlet {
 			} else {
 
 				errorMessage = errorMessage.replace("null", "");
-				request.setAttribute("errorMessage", errorMessage);
-				RequestDispatcher req = request.getRequestDispatcher("register.jsp");
-				req.include(request, response);
+				HttpSession session = request.getSession(false);
+
+				session.setAttribute("errorMessage", errorMessage);
+				
+				response.sendRedirect("register.jsp");
 			}
-		} catch (ClassNotFoundException | SQLException | ServletException | IOException e) {
+		} catch (ClassNotFoundException | SQLException | IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}

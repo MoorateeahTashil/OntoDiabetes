@@ -229,8 +229,8 @@ body {
 
 
 									<%
-									String message = (String) request.getAttribute("errorMessage");
-									;
+									String message = (String) session.getAttribute("errorMessage");
+									session.removeAttribute("errorMessage");
 									%>
 
 
