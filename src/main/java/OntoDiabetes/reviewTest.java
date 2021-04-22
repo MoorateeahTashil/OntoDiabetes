@@ -188,69 +188,45 @@ public class reviewTest extends HttpServlet {
 		OWLOntology ontology = ontologyManager
 				.loadOntologyFromOntologyDocument(new File(getServletContext().getRealPath("Diabetes.owl")));
 
-		// Create SQWRL query engine using the SWRLAPI
+		SWRLRuleEngine swrlRuleEngine = SWRLAPIFactory.createSWRLRuleEngine(ontology);
 		SQWRLQueryEngine queryEngine = SWRLAPIFactory.createSQWRLQueryEngine(ontology);
 
-		// Create and execute a SQWRL query using the SWRLAPI
-		SQWRLResult result = queryEngine.runSQWRLQuery("q", "#Patient(?p) ^ #hasPatientID(?p, \"" + UserID
-				+ "\") ^ #hasFbs(?p,?fbs) ^ swrlb:greaterThan(?fbs , 126)  -> sqwrl:select(?p) ^ sqwrl:columnNames(\"x\")");
+		// Run the SWRL rules in the ontology
+		swrlRuleEngine.infer();
+
+		ontologyManager.saveOntology(ontology);
+		
+		
+
+		SQWRLResult hasDiabetes = queryEngine.runSQWRLQuery("q5", "#Patient(?p) ^ #hasPatientID(?p, \"" + UserID
+				+ "\") ^ #hasDiabetes(?p,true) -> sqwrl:select(?p) ^ sqwrl:columnNames(\"x\")");
 
 		// Process the SQWRL result
 
-		while (result.next()) {
+		while (hasDiabetes.next()) {
 			message.clear();
-			message.add("Patient has Diabetes Mellitus(FBS > 125).");
+			message.add("Patient has Diabetes Mellitus).");
+		}
+		
+
+		SQWRLResult hasImpairedGlucoseTolerance = queryEngine.runSQWRLQuery("q5", "#Patient(?p) ^ #hasPatientID(?p, \"" + UserID
+				+ "\") ^ #hasImpairedGlucoseTolerance(?p,true) -> sqwrl:select(?p) ^ sqwrl:columnNames(\"x\")");
+
+		// Process the SQWRL result
+
+		while (hasImpairedGlucoseTolerance.next()) {
+			message.clear();
+			message.add("Patient has Impaired Glucose Tolerance (IGT).");
 		}
 
-		// Create and execute a SQWRL query using the SWRLAPI
-		SQWRLResult result1 = queryEngine.runSQWRLQuery("q1", "#Patient(?p) ^ #hasPatientID(?p, \"" + UserID
-				+ "\") ^ #hasRbs(?p,?rbs) ^ swrlb:greaterThan(?rbs , 200)  -> sqwrl:select(?p) ^ sqwrl:columnNames(\"x\")");
+		SQWRLResult hasImpairedFastingGlycaemia = queryEngine.runSQWRLQuery("q5", "#Patient(?p) ^ #hasPatientID(?p, \"" + UserID
+				+ "\") ^ #hasImpairedFastingGlycaemia(?p,true) -> sqwrl:select(?p) ^ sqwrl:columnNames(\"x\")");
 
 		// Process the SQWRL result
 
-		while (result1.next()) {
+		while (hasImpairedFastingGlycaemia.next()) {
 			message.clear();
-			message.add("Patient has Diabetes Mellitus (Rbs > 200).");
-		}
-
-		SQWRLResult result2 = queryEngine.runSQWRLQuery("q2", "#Patient(?p) ^ #hasPatientID(?p, \"" + UserID
-				+ "\") ^ #hasFbs(?p,126) -> sqwrl:select(?p) ^ sqwrl:columnNames(\"x\")");
-
-		// Process the SQWRL result
-
-		while (result2.next()) {
-			message.clear();
-			message.add("Patient has Impaired Glucose Tolerance (IGT) (FBS = 126).");
-		}
-
-		SQWRLResult result3 = queryEngine.runSQWRLQuery("q3", "#Patient(?p) ^ #hasPatientID(?p, \"" + UserID
-				+ "\") ^ #hasRbs(?p,?rbs)  ^ swrlb:greaterThan(?rbs , 140)  ^ swrlb:lessThan(?rbs , 200) -> sqwrl:select(?p) ^ sqwrl:columnNames(\"x\")");
-
-		// Process the SQWRL result
-
-		while (result3.next()) {
-			message.clear();
-			message.add("Patient has Impaired Glucose Tolerance (IGT) (140 > Rbs > 200).");
-		}
-
-		SQWRLResult result4 = queryEngine.runSQWRLQuery("q4", "#Patient(?p) ^ #hasPatientID(?p, \"" + UserID
-				+ "\") ^ #hasRbs(?p,?rbs)  ^ swrlb:greaterThan(?rbs , 100)  ^ swrlb:lessThan(?rbs , 140) -> sqwrl:select(?p) ^ sqwrl:columnNames(\"x\")");
-
-		// Process the SQWRL result
-
-		while (result4.next()) {
-			message.clear();
-			message.add("Patient has Impaired Fasting Glycaemia (IFG) (100 > Rbs > 140).");
-		}
-
-		SQWRLResult result5 = queryEngine.runSQWRLQuery("q5", "#Patient(?p) ^ #hasPatientID(?p, \"" + UserID
-				+ "\") ^ #hasFbs(?p,?fbs)  ^ swrlb:greaterThan(?fbs , 110)  ^ swrlb:lessThan(?fbs , 126) -> sqwrl:select(?p) ^ sqwrl:columnNames(\"x\")");
-
-		// Process the SQWRL result
-
-		while (result5.next()) {
-			message.clear();
-			message.add("Patient has Impaired Fasting Glycaemia (IFG) (110 > FBS > 126).");
+			message.add("Patient has Impaired Fasting Glycaemia (IFG).");
 		}
 
 	}

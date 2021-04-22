@@ -123,6 +123,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#hasBlurredVision -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#hasBlurredVision">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#hasBmi -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#hasBmi">
@@ -134,6 +142,44 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#hasChildren -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#hasChildren">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#hasDarkPatches -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#hasDarkPatches">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#hasDiabetes -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#hasDiabetes">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#hasFatigue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#hasFatigue">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#hasFbs -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#hasFbs"/>
+    
+
+
+    <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#hasFirstDegreeRelative -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#hasFirstDegreeRelative">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -163,10 +209,88 @@
     
 
 
+    <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#hasHunger -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#hasHunger">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#hasInfection -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#hasInfection">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#hasLossWeight -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#hasLossWeight">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#hasObsetricHistory -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#hasObsetricHistory">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#hasPatientID -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#hasPatientID">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#hasPolydipsia -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#hasPolydipsia">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#hasPolyuria -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#hasPolyuria">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#hasRbs -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#hasRbs"/>
+    
+
+
+    <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#hasSlowHealing -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#hasSlowHealing">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#hasTension -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#hasTension">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#hasTinglingHandsAndFeet -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#hasTinglingHandsAndFeet">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
@@ -176,6 +300,12 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#hasWeight">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
     </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#has_symptoms -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#has_symptoms"/>
     
 
 
@@ -193,7 +323,9 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#ACE_inhibitors -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#ACE_inhibitors">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Pharmacological"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Treatment"/>
     </owl:Class>
     
 
@@ -201,7 +333,9 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Albumin -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Albumin">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Tests"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Urine_dipstick_test"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Urine_test"/>
     </owl:Class>
     
 
@@ -209,6 +343,8 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Amputations -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Amputations">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Long-term"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Macrovascular"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Peripheral_artery_disease"/>
     </owl:Class>
     
@@ -217,7 +353,9 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Anxiety -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Anxiety">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Complications"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Hypoglycemia"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Short-term"/>
     </owl:Class>
     
 
@@ -225,6 +363,10 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Autonomic_pathology -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Autonomic_pathology">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diffuse_pathology"/>
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Focal_pathology"/>
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Motor_pathology"/>
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Sensory_pathology"/>
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#is_a"/>
@@ -239,6 +381,7 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#BMI_measurement -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#BMI_measurement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Tests"/>
     </owl:Class>
     
@@ -247,6 +390,7 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Baseline_ECG -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Baseline_ECG">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Tests"/>
     </owl:Class>
     
@@ -262,6 +406,12 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Proliferative"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#is_a"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Proliferative"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -269,6 +419,7 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Blurred_vision -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Blurred_vision">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Symptoms"/>
     </owl:Class>
     
@@ -277,6 +428,8 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Cerebrovascular_disease -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Cerebrovascular_disease">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Complications"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Long-term"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Macrovascular"/>
     </owl:Class>
     
@@ -285,7 +438,9 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Cholesterol -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Cholesterol">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Fasting_blood_lipids"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Tests"/>
     </owl:Class>
     
 
@@ -301,7 +456,9 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Confusion -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Confusion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Complications"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Hypoglycemia"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Short-term"/>
     </owl:Class>
     
 
@@ -309,6 +466,8 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Coronary_artery_disease -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Coronary_artery_disease">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Complications"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Long-term"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Macrovascular"/>
     </owl:Class>
     
@@ -317,7 +476,9 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#DPP-4_inhibitors -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#DPP-4_inhibitors">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Pharmacological"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Treatment"/>
     </owl:Class>
     
 
@@ -331,7 +492,9 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diet -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diet">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Non-pharmacological"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Treatment"/>
     </owl:Class>
     
 
@@ -339,6 +502,9 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diffuse_pathology -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diffuse_pathology">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Focal_pathology"/>
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Motor_pathology"/>
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Sensory_pathology"/>
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#is_a"/>
@@ -353,6 +519,7 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Examination_of_feet_for_pulses -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Examination_of_feet_for_pulses">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Tests"/>
     </owl:Class>
     
@@ -361,7 +528,9 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Exercise -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Exercise">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Non-pharmacological"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Treatment"/>
     </owl:Class>
     
 
@@ -369,6 +538,7 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Family_history_of_diabetes_in_a_first_degree_relative -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Family_history_of_diabetes_in_a_first_degree_relative">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Symptoms"/>
     </owl:Class>
     
@@ -377,6 +547,7 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Fasting_blood_lipids -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Fasting_blood_lipids">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Tests"/>
     </owl:Class>
     
@@ -385,7 +556,9 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Fasting_plasma_glucose_level -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Fasting_plasma_glucose_level">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Plasma_glucose_measurement"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Tests"/>
     </owl:Class>
     
 
@@ -393,6 +566,7 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Fatigue -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Fatigue">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Symptoms"/>
     </owl:Class>
     
@@ -401,6 +575,8 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Focal_pathology -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Focal_pathology">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Motor_pathology"/>
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Sensory_pathology"/>
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#is_a"/>
@@ -415,6 +591,7 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Frequent_infections -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Frequent_infections">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Symptoms"/>
     </owl:Class>
     
@@ -423,6 +600,8 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Glucose -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Glucose">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Tests"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Urine_test"/>
     </owl:Class>
     
@@ -431,6 +610,7 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Glycosylated_haemoglobin_test -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Glycosylated_haemoglobin_test">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Tests"/>
     </owl:Class>
     
@@ -439,6 +619,8 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#HDL -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#HDL">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Fasting_blood_lipids"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Tests"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Triglycerides"/>
     </owl:Class>
     
@@ -447,6 +629,10 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Hard_exudates -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Hard_exudates">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Microaneurysms"/>
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Retinal_hemorrhages"/>
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Soft_exudates"/>
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Venous_loops"/>
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#is_a"/>
@@ -461,7 +647,9 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Headaches -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Headaches">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Complications"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Hypoglycemia"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Short-term"/>
     </owl:Class>
     
 
@@ -470,6 +658,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Heart_attack">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Coronary_artery_disease"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Long-term"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Macrovascular"/>
     </owl:Class>
     
 
@@ -477,6 +667,7 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Height_measurement -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Height_measurement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Tests"/>
     </owl:Class>
     
@@ -486,6 +677,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#High">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Exercise"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Non-pharmacological"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Treatment"/>
     </owl:Class>
     
 
@@ -493,7 +686,9 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#High_glucose_level -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#High_glucose_level">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Complications"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Hyperosmolar_Hyperglycemic_Nonketotic_Syndrome"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Short-term"/>
     </owl:Class>
     
 
@@ -501,6 +696,8 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Hyperosmolar_Hyperglycemic_Nonketotic_Syndrome -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Hyperosmolar_Hyperglycemic_Nonketotic_Syndrome">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Complications"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Short-term"/>
     </owl:Class>
     
@@ -509,6 +706,7 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Hypertension -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Hypertension">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Symptoms"/>
     </owl:Class>
     
@@ -517,6 +715,8 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Hypoglycemia -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Hypoglycemia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Complications"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Short-term"/>
     </owl:Class>
     
@@ -525,6 +725,7 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Increased_hunger -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Increased_hunger">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Symptoms"/>
     </owl:Class>
     
@@ -533,7 +734,9 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Insulin -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Insulin">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Pharmacological"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Treatment"/>
     </owl:Class>
     
 
@@ -541,6 +744,8 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Ketones -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Ketones">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Tests"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Urine_test"/>
     </owl:Class>
     
@@ -549,6 +754,8 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#LDL -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#LDL">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Fasting_blood_lipids"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Tests"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Triglycerides"/>
     </owl:Class>
     
@@ -557,6 +764,8 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Leg_muscular_pain -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Leg_muscular_pain">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Long-term"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Macrovascular"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Peripheral_artery_disease"/>
     </owl:Class>
     
@@ -566,6 +775,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Long-term">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Complications"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
     </owl:Class>
     
 
@@ -574,6 +784,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Low">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Exercise"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Non-pharmacological"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Treatment"/>
     </owl:Class>
     
 
@@ -581,6 +793,8 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Macrovascular -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Macrovascular">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Complications"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Long-term"/>
     </owl:Class>
     
@@ -589,6 +803,7 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Measurement_of_blood_pressure -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Measurement_of_blood_pressure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Tests"/>
     </owl:Class>
     
@@ -597,6 +812,7 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Measurement_of_visual_acuity -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Measurement_of_visual_acuity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Tests"/>
     </owl:Class>
     
@@ -605,7 +821,9 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Metformin -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Metformin">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Pharmacological"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Treatment"/>
     </owl:Class>
     
 
@@ -613,6 +831,9 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Microaneurysms -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Microaneurysms">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Retinal_hemorrhages"/>
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Soft_exudates"/>
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Venous_loops"/>
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#is_a"/>
@@ -627,6 +848,8 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Microvascular -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Microvascular">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Complications"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Long-term"/>
     </owl:Class>
     
@@ -636,6 +859,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Moderate">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Exercise"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Non-pharmacological"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Treatment"/>
     </owl:Class>
     
 
@@ -643,6 +868,7 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Motor_pathology -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Motor_pathology">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Sensory_pathology"/>
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#is_a"/>
@@ -657,6 +883,8 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Nephropathy -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Nephropathy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Complications"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Long-term"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Microvascular"/>
     </owl:Class>
     
@@ -665,6 +893,8 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Nerve_pathology -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Nerve_pathology">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Long-term"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Microvascular"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Neuropathy"/>
     </owl:Class>
     
@@ -673,6 +903,8 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Neuropathy -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Neuropathy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Complications"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Long-term"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Microvascular"/>
     </owl:Class>
     
@@ -681,6 +913,7 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Non-pharmacological -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Non-pharmacological">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Treatment"/>
     </owl:Class>
     
@@ -689,6 +922,8 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Non-proliferative -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Non-proliferative">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Long-term"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Microvascular"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Retinopathy"/>
     </owl:Class>
     
@@ -697,6 +932,8 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Overt_nephropathy -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Overt_nephropathy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Long-term"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Microvascular"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Nephropathy"/>
     </owl:Class>
     
@@ -705,6 +942,7 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Overweight -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Overweight">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Symptoms"/>
     </owl:Class>
     
@@ -713,6 +951,7 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Patches_of_dark_skin -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Patches_of_dark_skin">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Symptoms"/>
     </owl:Class>
     
@@ -727,6 +966,8 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Peripheral_artery_disease -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Peripheral_artery_disease">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Complications"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Long-term"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Macrovascular"/>
     </owl:Class>
     
@@ -735,6 +976,7 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Pharmacological -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Pharmacological">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Treatment"/>
     </owl:Class>
     
@@ -743,6 +985,7 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Plasma_glucose_measurement -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Plasma_glucose_measurement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Tests"/>
     </owl:Class>
     
@@ -751,6 +994,7 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Polydipsia -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Polydipsia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Symptoms"/>
         <owl:disjointWith rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Polyuria"/>
     </owl:Class>
@@ -760,6 +1004,7 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Polyuria -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Polyuria">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Symptoms"/>
     </owl:Class>
     
@@ -768,6 +1013,7 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Poor_obstetric_history -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Poor_obstetric_history">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Symptoms"/>
     </owl:Class>
     
@@ -776,6 +1022,8 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Proliferative -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Proliferative">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Long-term"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Microvascular"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Retinopathy"/>
     </owl:Class>
     
@@ -784,7 +1032,9 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Rapid_heartbeat -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Rapid_heartbeat">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Complications"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Hypoglycemia"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Short-term"/>
     </owl:Class>
     
 
@@ -792,6 +1042,7 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Record_of_exercise -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Record_of_exercise">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Tests"/>
     </owl:Class>
     
@@ -800,7 +1051,9 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Reduce_alcohol_intake -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Reduce_alcohol_intake">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Non-pharmacological"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Treatment"/>
     </owl:Class>
     
 
@@ -808,6 +1061,8 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Retinal_hemorrhages -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Retinal_hemorrhages">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Soft_exudates"/>
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Venous_loops"/>
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#is_a"/>
@@ -822,6 +1077,8 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Retinopathy -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Retinopathy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Complications"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Long-term"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Microvascular"/>
     </owl:Class>
     
@@ -830,7 +1087,9 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#SGLT2_inhibitors -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#SGLT2_inhibitors">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Pharmacological"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Treatment"/>
     </owl:Class>
     
 
@@ -853,6 +1112,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Short-term">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Complications"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
     </owl:Class>
     
 
@@ -860,7 +1120,9 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Sleepiness -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Sleepiness">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Complications"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Hypoglycemia"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Short-term"/>
     </owl:Class>
     
 
@@ -868,6 +1130,7 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Slow-healing_sores_and_wounds -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Slow-healing_sores_and_wounds">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Symptoms"/>
     </owl:Class>
     
@@ -876,7 +1139,9 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Slurred_speech -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Slurred_speech">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Complications"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Hypoglycemia"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Short-term"/>
     </owl:Class>
     
 
@@ -884,7 +1149,9 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Smoking_cessation -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Smoking_cessation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Non-pharmacological"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Treatment"/>
     </owl:Class>
     
 
@@ -892,6 +1159,7 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Soft_exudates -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Soft_exudates">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Venous_loops"/>
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#is_a"/>
@@ -907,6 +1175,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Stroke">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Cerebrovascular_disease"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Long-term"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Macrovascular"/>
     </owl:Class>
     
 
@@ -914,7 +1184,9 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Sulfonylureas -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Sulfonylureas">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Pharmacological"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Treatment"/>
     </owl:Class>
     
 
@@ -922,7 +1194,9 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Sweating -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Sweating">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Complications"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Hypoglycemia"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Short-term"/>
     </owl:Class>
     
 
@@ -947,6 +1221,7 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Tingling_hands_and_feet -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Tingling_hands_and_feet">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Symptoms"/>
     </owl:Class>
     
@@ -963,7 +1238,9 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Triglycerides -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Triglycerides">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Fasting_blood_lipids"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Tests"/>
     </owl:Class>
     
 
@@ -971,6 +1248,8 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Urine_dipstick_test -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Urine_dipstick_test">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Tests"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Urine_test"/>
     </owl:Class>
     
@@ -979,6 +1258,7 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Urine_test -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Urine_test">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Tests"/>
     </owl:Class>
     
@@ -1001,6 +1281,7 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Waist_Measurement -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Waist_Measurement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Tests"/>
     </owl:Class>
     
@@ -1009,6 +1290,7 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Weight_loss -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Weight_loss">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Symptoms"/>
     </owl:Class>
     
@@ -1017,7 +1299,9 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Weight_maintenace -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Weight_maintenace">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Non-pharmacological"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Treatment"/>
     </owl:Class>
     
 
@@ -1025,6 +1309,7 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Weight_measurement -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Weight_measurement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Tests"/>
     </owl:Class>
     
@@ -1033,7 +1318,9 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Whiteness_of_skin -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Whiteness_of_skin">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Complications"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Hypoglycemia"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Short-term"/>
     </owl:Class>
     
 
@@ -1041,7 +1328,9 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#2-hour_plasma_glucose_load -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#2-hour_plasma_glucose_load">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Plasma_glucose_measurement"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Tests"/>
     </owl:Class>
     
 
@@ -1049,7 +1338,9 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Numbness_in_fingers,_toes_and_lips -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Numbness_in_fingers,_toes_and_lips">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Complications"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Hypoglycemia"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Short-term"/>
     </owl:Class>
     
 
@@ -1057,6 +1348,7 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Retinal_examination_(fundoscopy)_through_eye_dilation -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Retinal_examination_(fundoscopy)_through_eye_dilation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Tests"/>
     </owl:Class>
     
@@ -1077,6 +1369,9 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#ACE_inhibitors">
         <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#ACE_inhibitors"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Pharmacological"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Treatment"/>
     </owl:NamedIndividual>
     
 
@@ -1085,6 +1380,10 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Albumin">
         <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Albumin"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Tests"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Urine_dipstick_test"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Urine_test"/>
     </owl:NamedIndividual>
     
 
@@ -1093,6 +1392,11 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Amputations">
         <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Amputations"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Complications"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Long-term"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Macrovascular"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Peripheral_artery_disease"/>
     </owl:NamedIndividual>
     
 
@@ -1101,6 +1405,10 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Anxiety">
         <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Anxiety"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Complications"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Hypoglycemia"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Short-term"/>
     </owl:NamedIndividual>
     
 
@@ -1109,6 +1417,22 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Autonomic_pathology">
         <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Autonomic_pathology"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Complications"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diffuse_pathology"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Focal_pathology"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Long-term"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Microvascular"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Motor_pathology"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Nerve_pathology"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Neuropathy"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Sensory_pathology"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#is_a"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Nerve_pathology"/>
+            </owl:Restriction>
+        </rdf:type>
     </owl:NamedIndividual>
     
 
@@ -1117,6 +1441,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#BMI_measurement">
         <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#BMI_measurement"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Tests"/>
     </owl:NamedIndividual>
     
 
@@ -1125,6 +1451,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Baseline_ECG">
         <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Baseline_ECG"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Tests"/>
     </owl:NamedIndividual>
     
 
@@ -1133,6 +1461,18 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Blood_vessels_with_or_without_vitreous_hemorrhages">
         <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Blood_vessels_with_or_without_vitreous_hemorrhages"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Complications"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Long-term"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Microvascular"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Proliferative"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Retinopathy"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#is_a"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Proliferative"/>
+            </owl:Restriction>
+        </rdf:type>
     </owl:NamedIndividual>
     
 
@@ -1141,6 +1481,14 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Blurred_vision">
         <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Blurred_vision"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Symptoms"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#has_symptoms"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Symptoms"/>
+            </owl:Restriction>
+        </rdf:type>
     </owl:NamedIndividual>
     
 
@@ -1149,6 +1497,9 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Cholesterol-FBL">
         <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Cholesterol"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Fasting_blood_lipids"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Tests"/>
     </owl:NamedIndividual>
     
 
@@ -1156,7 +1507,11 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Confusion -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Confusion">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Complications"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Confusion"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Hypoglycemia"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Short-term"/>
     </owl:NamedIndividual>
     
 
@@ -1165,6 +1520,9 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#DPP-4_inhibitors">
         <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#DPP-4_inhibitors"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Pharmacological"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Treatment"/>
     </owl:NamedIndividual>
     
 
@@ -1172,7 +1530,10 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diet -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diet">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diet"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Non-pharmacological"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Treatment"/>
     </owl:NamedIndividual>
     
 
@@ -1180,7 +1541,23 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diffuse_pathology -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diffuse_pathology">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Autonomic_pathology"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Complications"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diffuse_pathology"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Focal_pathology"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Long-term"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Microvascular"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Motor_pathology"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Nerve_pathology"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Neuropathy"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Sensory_pathology"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#is_a"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Nerve_pathology"/>
+            </owl:Restriction>
+        </rdf:type>
     </owl:NamedIndividual>
     
 
@@ -1188,21 +1565,20 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Examination_of_feet_for_pulses -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Examination_of_feet_for_pulses">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Examination_of_feet_for_pulses"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Tests"/>
     </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Family_history_of_diabetes_in_a_first_degree_relative -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Family_history_of_diabetes_in_a_first_degree_relative"/>
     
 
 
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Fasting_plasma_glucose_level -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Fasting_plasma_glucose_level">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Fasting_plasma_glucose_level"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Plasma_glucose_measurement"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Tests"/>
     </owl:NamedIndividual>
     
 
@@ -1210,7 +1586,15 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Fatigue -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Fatigue">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Fatigue"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Symptoms"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#has_symptoms"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Symptoms"/>
+            </owl:Restriction>
+        </rdf:type>
     </owl:NamedIndividual>
     
 
@@ -1218,7 +1602,23 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Focal_pathology -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Focal_pathology">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Autonomic_pathology"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Complications"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diffuse_pathology"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Focal_pathology"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Long-term"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Microvascular"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Motor_pathology"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Nerve_pathology"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Neuropathy"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Sensory_pathology"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#is_a"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Nerve_pathology"/>
+            </owl:Restriction>
+        </rdf:type>
     </owl:NamedIndividual>
     
 
@@ -1226,7 +1626,15 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Frequent_infections -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Frequent_infections">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Frequent_infections"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Symptoms"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#has_symptoms"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Symptoms"/>
+            </owl:Restriction>
+        </rdf:type>
     </owl:NamedIndividual>
     
 
@@ -1234,7 +1642,10 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Glucose -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Glucose">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Glucose"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Tests"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Urine_test"/>
     </owl:NamedIndividual>
     
 
@@ -1242,7 +1653,9 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Glycosylated_haemoglobin_test -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Glycosylated_haemoglobin_test">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Glycosylated_haemoglobin_test"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Tests"/>
     </owl:NamedIndividual>
     
 
@@ -1250,7 +1663,11 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#HDL_Triglycerides -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#HDL_Triglycerides">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Fasting_blood_lipids"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#HDL"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Tests"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Triglycerides"/>
     </owl:NamedIndividual>
     
 
@@ -1258,7 +1675,23 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Hard_exudates -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Hard_exudates">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Complications"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Hard_exudates"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Long-term"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Microaneurysms"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Microvascular"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Non-proliferative"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Retinal_hemorrhages"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Retinopathy"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Soft_exudates"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Venous_loops"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#is_a"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Non-proliferative"/>
+            </owl:Restriction>
+        </rdf:type>
     </owl:NamedIndividual>
     
 
@@ -1266,7 +1699,11 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Headaches -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Headaches">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Complications"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Headaches"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Hypoglycemia"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Short-term"/>
     </owl:NamedIndividual>
     
 
@@ -1274,7 +1711,12 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Heart_attack -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Heart_attack">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Complications"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Coronary_artery_disease"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Heart_attack"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Long-term"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Macrovascular"/>
     </owl:NamedIndividual>
     
 
@@ -1282,7 +1724,9 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Height_measurement -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Height_measurement">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Height_measurement"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Tests"/>
     </owl:NamedIndividual>
     
 
@@ -1290,7 +1734,11 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#High_exercise -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#High_exercise">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Exercise"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#High"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Non-pharmacological"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Treatment"/>
     </owl:NamedIndividual>
     
 
@@ -1298,7 +1746,11 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#High_glucose_level -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#High_glucose_level">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Complications"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#High_glucose_level"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Hyperosmolar_Hyperglycemic_Nonketotic_Syndrome"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Short-term"/>
     </owl:NamedIndividual>
     
 
@@ -1306,7 +1758,9 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Hypertension -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Hypertension">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Hypertension"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Symptoms"/>
     </owl:NamedIndividual>
     
 
@@ -1314,7 +1768,15 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Increased_hunger -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Increased_hunger">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Increased_hunger"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Symptoms"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#has_symptoms"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Symptoms"/>
+            </owl:Restriction>
+        </rdf:type>
     </owl:NamedIndividual>
     
 
@@ -1322,7 +1784,10 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Insulin -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Insulin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Insulin"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Pharmacological"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Treatment"/>
     </owl:NamedIndividual>
     
 
@@ -1330,7 +1795,10 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Ketones -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Ketones">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Ketones"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Tests"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Urine_test"/>
     </owl:NamedIndividual>
     
 
@@ -1338,7 +1806,11 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#LDL_Triglycerides -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#LDL_Triglycerides">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Fasting_blood_lipids"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#LDL"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Tests"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Triglycerides"/>
     </owl:NamedIndividual>
     
 
@@ -1346,7 +1818,12 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Leg_muscular_pain -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Leg_muscular_pain">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Complications"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Leg_muscular_pain"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Long-term"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Macrovascular"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Peripheral_artery_disease"/>
     </owl:NamedIndividual>
     
 
@@ -1354,16 +1831,11 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Low_exercise -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Low_exercise">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Exercise"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Low"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Mary -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Mary">
-        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Patient"/>
-        <Diabetes_ontology:hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Female</Diabetes_ontology:hasGender>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Non-pharmacological"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Treatment"/>
     </owl:NamedIndividual>
     
 
@@ -1371,7 +1843,9 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Measurement_of_blood_pressure -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Measurement_of_blood_pressure">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Measurement_of_blood_pressure"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Tests"/>
     </owl:NamedIndividual>
     
 
@@ -1379,7 +1853,9 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Measurement_of_visual_acuity -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Measurement_of_visual_acuity">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Measurement_of_visual_acuity"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Tests"/>
     </owl:NamedIndividual>
     
 
@@ -1387,7 +1863,10 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Metformin -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Metformin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Metformin"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Pharmacological"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Treatment"/>
     </owl:NamedIndividual>
     
 
@@ -1395,7 +1874,23 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Microaneurysms -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Microaneurysms">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Complications"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Hard_exudates"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Long-term"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Microaneurysms"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Microvascular"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Non-proliferative"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Retinal_hemorrhages"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Retinopathy"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Soft_exudates"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Venous_loops"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#is_a"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Non-proliferative"/>
+            </owl:Restriction>
+        </rdf:type>
     </owl:NamedIndividual>
     
 
@@ -1403,7 +1898,11 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Moderate_exercise -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Moderate_exercise">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Exercise"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Moderate"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Non-pharmacological"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Treatment"/>
     </owl:NamedIndividual>
     
 
@@ -1411,7 +1910,23 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Motor_pathology -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Motor_pathology">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Autonomic_pathology"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Complications"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diffuse_pathology"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Focal_pathology"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Long-term"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Microvascular"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Motor_pathology"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Nerve_pathology"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Neuropathy"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Sensory_pathology"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#is_a"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Nerve_pathology"/>
+            </owl:Restriction>
+        </rdf:type>
     </owl:NamedIndividual>
     
 
@@ -1419,6 +1934,11 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Overt_nephropathy -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Overt_nephropathy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Complications"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Long-term"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Microvascular"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Nephropathy"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Overt_nephropathy"/>
     </owl:NamedIndividual>
     
@@ -1427,7 +1947,9 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Overweight -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Overweight">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Overweight"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Symptoms"/>
     </owl:NamedIndividual>
     
 
@@ -1435,25 +1957,50 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Patches_of_dark_skin -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Patches_of_dark_skin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Patches_of_dark_skin"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Symptoms"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#has_symptoms"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Symptoms"/>
+            </owl:Restriction>
+        </rdf:type>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Patient_A -->
+    <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Patient_1 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Patient_A">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Patient_1">
         <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Patient"/>
-        <Diabetes_ontology:has_symptoms rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Polyuria"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Patient_B -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Patient_B">
-        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Patient"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#has_symptoms"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Symptoms"/>
+            </owl:Restriction>
+        </rdf:type>
+        <Diabetes_ontology:has_symptoms rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Blurred_vision"/>
+        <Diabetes_ontology:has_symptoms rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Fatigue"/>
+        <Diabetes_ontology:has_symptoms rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Frequent_infections"/>
+        <Diabetes_ontology:has_symptoms rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Increased_hunger"/>
+        <Diabetes_ontology:has_symptoms rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Patches_of_dark_skin"/>
         <Diabetes_ontology:has_symptoms rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Polydipsia"/>
+        <Diabetes_ontology:has_symptoms rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Polyuria"/>
+        <Diabetes_ontology:has_symptoms rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#RelativeDiabetes"/>
+        <Diabetes_ontology:has_symptoms rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Slow-healing_sores_and_wounds"/>
+        <Diabetes_ontology:has_symptoms rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Tingling_hands_and_feet"/>
+        <Diabetes_ontology:has_symptoms rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Weight_loss"/>
+        <Diabetes_ontology:hasBmi rdf:datatype="http://www.w3.org/2001/XMLSchema#double">27.776910832995224</Diabetes_ontology:hasBmi>
+        <Diabetes_ontology:hasChildren rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</Diabetes_ontology:hasChildren>
+        <Diabetes_ontology:hasDiabetes rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</Diabetes_ontology:hasDiabetes>
+        <Diabetes_ontology:hasFbs rdf:datatype="http://www.w3.org/2001/XMLSchema#double">127.0</Diabetes_ontology:hasFbs>
+        <Diabetes_ontology:hasFullName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tashil Rye Moorateeah</Diabetes_ontology:hasFullName>
+        <Diabetes_ontology:hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</Diabetes_ontology:hasGender>
+        <Diabetes_ontology:hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.79</Diabetes_ontology:hasHeight>
+        <Diabetes_ontology:hasPatientID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</Diabetes_ontology:hasPatientID>
+        <Diabetes_ontology:hasRbs rdf:datatype="http://www.w3.org/2001/XMLSchema#double">201.0</Diabetes_ontology:hasRbs>
+        <Diabetes_ontology:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">89.0</Diabetes_ontology:hasWeight>
     </owl:NamedIndividual>
     
 
@@ -1461,7 +2008,9 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Plasma -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Plasma">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Plasma_glucose_measurement"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Tests"/>
     </owl:NamedIndividual>
     
 
@@ -1469,7 +2018,15 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Polydipsia -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Polydipsia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Polydipsia"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Symptoms"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#has_symptoms"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Symptoms"/>
+            </owl:Restriction>
+        </rdf:type>
     </owl:NamedIndividual>
     
 
@@ -1477,7 +2034,15 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Polyuria -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Polyuria">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Polyuria"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Symptoms"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#has_symptoms"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Symptoms"/>
+            </owl:Restriction>
+        </rdf:type>
     </owl:NamedIndividual>
     
 
@@ -1485,7 +2050,9 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Poor_obstettric_history -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Poor_obstettric_history">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Poor_obstetric_history"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Symptoms"/>
     </owl:NamedIndividual>
     
 
@@ -1493,7 +2060,11 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Rapid_heartbeat -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Rapid_heartbeat">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Complications"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Hypoglycemia"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Rapid_heartbeat"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Short-term"/>
     </owl:NamedIndividual>
     
 
@@ -1501,7 +2072,9 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Record_of_exercise -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Record_of_exercise">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Record_of_exercise"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Tests"/>
     </owl:NamedIndividual>
     
 
@@ -1509,7 +2082,26 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Reduce_alcohol_intake -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Reduce_alcohol_intake">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Non-pharmacological"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Reduce_alcohol_intake"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Treatment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#RelativeDiabetes -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#RelativeDiabetes">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Family_history_of_diabetes_in_a_first_degree_relative"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Symptoms"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#has_symptoms"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Symptoms"/>
+            </owl:Restriction>
+        </rdf:type>
     </owl:NamedIndividual>
     
 
@@ -1517,7 +2109,23 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Retinal_hemorrhages -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Retinal_hemorrhages">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Complications"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Hard_exudates"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Long-term"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Microaneurysms"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Microvascular"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Non-proliferative"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Retinal_hemorrhages"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Retinopathy"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Soft_exudates"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Venous_loops"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#is_a"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Non-proliferative"/>
+            </owl:Restriction>
+        </rdf:type>
     </owl:NamedIndividual>
     
 
@@ -1525,7 +2133,10 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#SGLT2_inhibitors -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#SGLT2_inhibitors">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Pharmacological"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#SGLT2_inhibitors"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Treatment"/>
     </owl:NamedIndividual>
     
 
@@ -1533,7 +2144,23 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Sensory_pathology -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Sensory_pathology">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Autonomic_pathology"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Complications"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diffuse_pathology"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Focal_pathology"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Long-term"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Microvascular"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Motor_pathology"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Nerve_pathology"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Neuropathy"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Sensory_pathology"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#is_a"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Nerve_pathology"/>
+            </owl:Restriction>
+        </rdf:type>
     </owl:NamedIndividual>
     
 
@@ -1541,6 +2168,10 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Sleepiness -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Sleepiness">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Complications"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Hypoglycemia"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Short-term"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Sleepiness"/>
     </owl:NamedIndividual>
     
@@ -1549,7 +2180,15 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Slow-healing_sores_and_wounds -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Slow-healing_sores_and_wounds">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Slow-healing_sores_and_wounds"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Symptoms"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#has_symptoms"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Symptoms"/>
+            </owl:Restriction>
+        </rdf:type>
     </owl:NamedIndividual>
     
 
@@ -1557,6 +2196,10 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Slurred_speech -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Slurred_speech">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Complications"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Hypoglycemia"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Short-term"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Slurred_speech"/>
     </owl:NamedIndividual>
     
@@ -1565,7 +2208,10 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Smoking_cessation -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Smoking_cessation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Non-pharmacological"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Smoking_cessation"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Treatment"/>
     </owl:NamedIndividual>
     
 
@@ -1573,7 +2219,23 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Soft_exudates -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Soft_exudates">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Complications"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Hard_exudates"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Long-term"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Microaneurysms"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Microvascular"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Non-proliferative"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Retinal_hemorrhages"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Retinopathy"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Soft_exudates"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Venous_loops"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#is_a"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Non-proliferative"/>
+            </owl:Restriction>
+        </rdf:type>
     </owl:NamedIndividual>
     
 
@@ -1581,6 +2243,11 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Stroke -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Stroke">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Cerebrovascular_disease"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Complications"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Long-term"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Macrovascular"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Stroke"/>
     </owl:NamedIndividual>
     
@@ -1589,7 +2256,10 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Sulfonylureas -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Sulfonylureas">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Pharmacological"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Sulfonylureas"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Treatment"/>
     </owl:NamedIndividual>
     
 
@@ -1597,6 +2267,10 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Sweating -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Sweating">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Complications"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Hypoglycemia"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Short-term"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Sweating"/>
     </owl:NamedIndividual>
     
@@ -1605,7 +2279,15 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Tingling_hands_and_feet -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Tingling_hands_and_feet">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Symptoms"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Tingling_hands_and_feet"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#has_symptoms"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Symptoms"/>
+            </owl:Restriction>
+        </rdf:type>
     </owl:NamedIndividual>
     
 
@@ -1613,7 +2295,23 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Venous_loops -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Venous_loops">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Complications"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Hard_exudates"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Long-term"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Microaneurysms"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Microvascular"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Non-proliferative"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Retinal_hemorrhages"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Retinopathy"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Soft_exudates"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Venous_loops"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#is_a"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Non-proliferative"/>
+            </owl:Restriction>
+        </rdf:type>
     </owl:NamedIndividual>
     
 
@@ -1621,6 +2319,8 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Waist_Measurement -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Waist_Measurement">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Tests"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Waist_Measurement"/>
     </owl:NamedIndividual>
     
@@ -1629,7 +2329,15 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Weight_loss -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Weight_loss">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Symptoms"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Weight_loss"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#has_symptoms"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Symptoms"/>
+            </owl:Restriction>
+        </rdf:type>
     </owl:NamedIndividual>
     
 
@@ -1637,6 +2345,9 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Weight_maintenace -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Weight_maintenace">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Non-pharmacological"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Treatment"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Weight_maintenace"/>
     </owl:NamedIndividual>
     
@@ -1645,6 +2356,8 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Weight_measurement -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Weight_measurement">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Tests"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Weight_measurement"/>
     </owl:NamedIndividual>
     
@@ -1653,6 +2366,10 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Whiteness_of_skin -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Whiteness_of_skin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Complications"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Hypoglycemia"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Short-term"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Whiteness_of_skin"/>
     </owl:NamedIndividual>
     
@@ -1661,6 +2378,9 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#2-hour_plasma_glucose_load -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#2-hour_plasma_glucose_load">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Plasma_glucose_measurement"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Tests"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#2-hour_plasma_glucose_load"/>
     </owl:NamedIndividual>
     
@@ -1669,6 +2389,10 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Numbness_in_fingers,_toes_and_lips -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Numbness_in_fingers,_toes_and_lips">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Complications"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Hypoglycemia"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Short-term"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Numbness_in_fingers,_toes_and_lips"/>
     </owl:NamedIndividual>
     
@@ -1677,6 +2401,8 @@
     <!-- http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Retinal_examination_(fundoscopy)_through_eye_dilation -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Retinal_examination_(fundoscopy)_through_eye_dilation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Diabetes"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Tests"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Retinal_examination_(fundoscopy)_through_eye_dilation"/>
     </owl:NamedIndividual>
     
@@ -1690,13 +2416,26 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Patient_A"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Patient_B"/>
-        </owl:distinctMembers>
-    </rdf:Description>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#is_a"/>
+        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Nerve_pathology"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Nerve_pathology"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#is_a"/>
+        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Non-proliferative"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Non-proliferative"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#is_a"/>
+        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Proliferative"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Blood_vessels_with_or_without_vitreous_hemorrhages"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#is_a"/>
+        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Proliferative"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Proliferative"/>
+    </owl:Restriction>
     
 
 
@@ -1711,13 +2450,13 @@
     <rdf:Description rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#p">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#x">
+    <rdf:Description rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Rbs">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
     <rdf:Description>
         <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
-        <rdfs:comment></rdfs:comment>
-        <rdfs:label>S1</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S1</rdfs:label>
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
         <swrl:body>
             <rdf:Description>
@@ -1729,7 +2468,44 @@
                         <swrl:argument1 rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#p"/>
                     </rdf:Description>
                 </rdf:first>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#hasRbs"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#p"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Rbs"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Rbs"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
             </rdf:Description>
         </swrl:body>
         <swrl:head>
@@ -1738,43 +2514,9 @@
                 <rdf:first>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#hasGender"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#hasDiabetes"/>
                         <swrl:argument1 rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#p"/>
-                        <swrl:argument2>Male</swrl:argument2>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </rdf:Description>
-        </swrl:head>
-    </rdf:Description>
-    <rdf:Description>
-        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
-        <rdfs:comment></rdfs:comment>
-        <rdfs:label>S2</rdfs:label>
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#Patient"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#x"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
-                        <swrl:builtin rdf:resource="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#select"/>
-                        <swrl:arguments rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#x"/>
-                        </swrl:arguments>
+                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>

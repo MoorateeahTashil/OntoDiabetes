@@ -83,7 +83,7 @@ String patientid = request.getParameter("patientid");
 
 											<input type="number" step="0.1"
 												class="form-control form-control-user" id="valueText"
-												name="valueText" placeholder="Value (mg dl-1)" required>
+												name="valueText" placeholder="Value (mmol/1-1)" required>
 										</div>
 										<%
 										String message = (String) session.getAttribute("errorMessage");

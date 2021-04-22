@@ -96,5 +96,8 @@ public class assignPatient extends HttpServlet {
 		con.close();
 
 	}
+	
+	
+	
 
 }
