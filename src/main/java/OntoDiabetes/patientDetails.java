@@ -71,6 +71,7 @@ public class patientDetails extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		errorMessage = "";
 		String surname = "";
 		String middlename = "";
 		String forename = "";
@@ -173,16 +174,16 @@ public class patientDetails extends HttpServlet {
 				request.setAttribute("worknumber", request.getParameter("worknumber"));
 				request.setAttribute("haschildrenDropDown", request.getParameter("haschildrenDropDown"));
 
-				RequestDispatcher req = request.getRequestDispatcher("patientDetails.jsp");
-				req.include(request, response);
+				errorMessage = errorMessage.replace("null", "");
+
+				session.setAttribute("errorMessage", errorMessage);
+				
+				response.sendRedirect("patientDetails.jsp");
 			}
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (ServletException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (IOException e) {

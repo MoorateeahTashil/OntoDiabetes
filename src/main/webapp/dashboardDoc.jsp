@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
 <%@ include file="masterDoc.jsp"%>
 
 <%
@@ -43,7 +43,8 @@ final String password = db.getPassword();
 		Statement st4 = con.createStatement();
 		Statement st1 = con.createStatement();
 
-		String query = "select * from [OntoDiabetes_Task] join OntoDiabetes_Doctor_Patient on OntoDiabetes_Doctor_Patient.patient_id  = [OntoDiabetes_Task].assign_to WHERE to_doc='yes' and doctor_id=" + session.getAttribute("userID") + ";";
+		String query = "select *,surname + ' ' + lastname + ' ' + ISNULL(middlename,'') as name from [OntoDiabetes_Task] join OntoDiabetes_Doctor_Patient on OntoDiabetes_Doctor_Patient.patient_id  = [OntoDiabetes_Task].assign_to  join OntoDiabetes_PatientDetails on OntoDiabetes_PatientDetails.userid = OntoDiabetes_Doctor_Patient.patient_id  WHERE to_doc='yes' and doctor_id="
+		+ session.getAttribute("userID") + ";";
 		String countOfPatients = "select count(*) as count from [OntoDiabetes_Doctor_Patient] WHERE [doctor_id] = "
 		+ session.getAttribute("userID") + ";";
 		String NumberOfTasksPending = "select count(*) as count from [OntoDiabetes_Task] join OntoDiabetes_Doctor_Patient on OntoDiabetes_Doctor_Patient.patient_id  = [OntoDiabetes_Task].assign_to WHERE to_doc='yes' and status='Pending' and doctor_id="
@@ -73,20 +74,15 @@ final String password = db.getPassword();
 		while (rs3.next()) {
 			numberTask = rs3.getInt("count");
 		}
-		
+
 		while (rs4.next()) {
 			numDoc = rs4.getInt("count");
 		}
-		
-		
-		
+
 		float percentage = 0;
-		if(numberTask > 0)
-		{
-			percentage = 100 - (( (float) numberTaskP / (float) numberTask) * 100);
+		if (numberTask > 0) {
+			percentage = 100 - (((float) numberTaskP / (float) numberTask) * 100);
 		}
-		
-		
 	%>
 
 	<div class="row">
@@ -197,6 +193,7 @@ final String password = db.getPassword();
 							cellspacing="0">
 							<thead>
 								<tr>
+									<th>Patient Name</th>
 									<th>Description</th>
 									<th>Status</th>
 									<th>Link</th>
@@ -204,6 +201,7 @@ final String password = db.getPassword();
 							</thead>
 							<tfoot>
 								<tr>
+									<th>Patient Name</th>
 									<th>Description</th>
 									<th>Status</th>
 									<th>Link</th>
@@ -215,10 +213,10 @@ final String password = db.getPassword();
 								while (rs.next()) {
 								%>
 								<tr>
+									<td><%=rs.getString("name")%></td>
 									<td><%=rs.getString("description")%></td>
 									<td><%=rs.getString("status")%></td>
-									<td><a href="<%=rs.getString("link")%>"
-										class="fa fa-link"></a></td>
+									<td><a href="<%=rs.getString("link")%>" class="fa fa-link"></a></td>
 
 								</tr>
 								<%

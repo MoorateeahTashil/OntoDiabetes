@@ -53,7 +53,7 @@ final String password = db.getPassword();
 		
 		
 		String DoctorName = "select surname+ ' ' + ISNULL(middlename,'') + ' ' + lastname as name from OntoDiabetes_DoctorDetails join OntoDiabetes_Doctor_Patient on OntoDiabetes_DoctorDetails.userid = OntoDiabetes_Doctor_Patient.doctor_id where patient_id = "+ session.getAttribute("userID") + ";";
-
+		String DoctorsName = "No Doctor Assigned Yet";
 		// send and execute SQL query in Database software
 		ResultSet rs = st.executeQuery(query);
 		ResultSet rs1 = st2.executeQuery(CurrentStage);
@@ -76,7 +76,7 @@ final String password = db.getPassword();
 		}
 		
 		while (rs4.next()) {
-			DoctorName = rs4.getString("name");
+			DoctorsName = rs4.getString("name");
 		}
 		
 		if(DoctorName == null || DoctorName == "")
@@ -117,7 +117,7 @@ final String password = db.getPassword();
 							<div
 								class="text-xs font-weight-bold text-success text-uppercase mb-1">
 								Doctor Assigned</div>
-							<div class="h5 mb-0 font-weight-bold text-gray-800"><%=DoctorName%></div>
+							<div class="h5 mb-0 font-weight-bold text-gray-800"><%=DoctorsName%></div>
 						</div>
 						<div class="col-auto">
 							<i class="fas fa-user-md fa-2x text-gray-300"></i>

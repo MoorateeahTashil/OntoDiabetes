@@ -179,8 +179,8 @@ if (session.getAttribute("userID") == null) {
 
 
 										<%
-										String message = (String) request.getAttribute("errorMessage");
-										%>
+										String message = (String) session.getAttribute("errorMessage");
+										session.removeAttribute("errorMessage");										%>
 
 
 										<%
