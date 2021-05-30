@@ -31,7 +31,7 @@ final String id = request.getParameter("patientid");
 
 	<!-- Page Heading -->
 	<div class="d-sm-flex align-items-center justify-content-between mb-4">
-		<h1 class="h3 mb-0 text-gray-800">Exercise</h1>
+		<h1 class="h3 mb-0 text-gray-800">Feet</h1>
 	</div>
 
 	<div class="container">
@@ -41,7 +41,7 @@ final String id = request.getParameter("patientid");
 
 				<div class="card shadow mb-4">
 					<div class="card-header py-3">
-						<h6 class="m-0 font-weight-bold text-primary">Exercise
+						<h6 class="m-0 font-weight-bold text-primary">Feet Care
 							Guidelines</h6>
 					</div>
 					<div class="card-body">
@@ -56,7 +56,7 @@ final String id = request.getParameter("patientid");
 										<li>Inspect feet regularly for cuts, blisters and
 											scratches. Once a week a thorough examination with mirrors is
 											necessary to see the soles of the feet and in between toes.</li>
-										<li>Wash feet daily – dry carefully between toes.</li>
+										<li>Wash feet daily - dry carefully between toes.</li>
 										<li>If feet feel cold at night during winter, wear socks.
 										</li>
 										<li>Do not walk on hot surfaces barefoot.</li>
@@ -70,10 +70,10 @@ final String id = request.getParameter("patientid");
 										<li>Do not soak feet.</li>
 										<li>For dry feet, use babyoil or emollient cream but not
 											in between toes.</li>
-										<li>Wear properly fitting stockings – Do not wear mended
+										<li>Wear properly fitting stockings.Do not wear mended
 											stockings, avoid stockings with seams, change stockings
 											daily.</li>
-										<li>Shoes should be comfortable at time of purchase – do
+										<li>Shoes should be comfortable at time of purchase - do
 											not depend on them to stretch out. Always wear socks with
 											shoes.</li>
 										<li>Cut nails straight across.</li>

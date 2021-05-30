@@ -102,19 +102,20 @@ public class treatmentResult extends HttpServlet {
 
 				String treatment = "<ul>";
 				if (exercise.length() > 0) {
-					treatment = "<li>";
-					treatment = exercise;
-					treatment = "</li>";
+					treatment += "<li>";
+					treatment += exercise;
+					treatment += "</li>";
 
 				}
 
 				
 				if (feet.length() > 0) {
-					treatment = "<li>";
-					treatment = feet;
-					treatment = "</li>";
+					treatment += "<li>";
+					treatment += feet;
+					treatment += "</li>";
 
 				}
+				treatment += "</ul>";
 				session.setAttribute("uncontrolled", uncontrolled);
 				session.setAttribute("acceptable", acceptable);
 				session.setAttribute("optimal", optimal);
@@ -218,7 +219,7 @@ public class treatmentResult extends HttpServlet {
 
 		String message = "";
 		SQWRLResult results = queryEngine.runSQWRLQuery("q4", "#Patient(?p) ^ #hasPatientID(?p, \"" + UserID
-				+ "\") ^ #hasNoFeetSensation(?p,Yes) -> sqwrl:select(?p) ^ sqwrl:columnNames(\"x\")");
+				+ "\") ^ #hasNoFeetSensation(?p,\"Yes\") ^  -> sqwrl:select(?p) ^ sqwrl:columnNames(\"x\")");
 
 		// Process the SQWRL result
 
