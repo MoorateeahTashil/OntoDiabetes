@@ -175,13 +175,18 @@ con.close();
 						String uncontrolled = (String) session.getAttribute("uncontrolled");
 						String acceptable = (String) session.getAttribute("acceptable");
 						String optimal = (String) session.getAttribute("optimal");
+						String exercise = (String) session.getAttribute("exercise");
+						String complications = (String) session.getAttribute("complications");
 
 						session.removeAttribute("uncontrolled");
 						session.removeAttribute("acceptable");
 						session.removeAttribute("optimal");
+						session.removeAttribute("exercise");
+						session.removeAttribute("complications");
+
 						%>
 						<%
-						if (uncontrolled == null || uncontrolled.isEmpty()) {
+						if (acceptable == null || acceptable.isEmpty()) {
 						} else {
 						%>
 
@@ -255,6 +260,63 @@ con.close();
 											</div>
 											<div class="col-auto">
 												<i class="fas fa-viruses fa-2x text-gray-300"></i>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						<%
+						}
+						%>
+						
+						
+									<%
+						if (exercise == null || exercise.isEmpty()) {
+						} else {
+						%>
+
+							<div class="col-xl-6 col-md-6 mb-4">
+								<div class="card border-left-primary shadow h-100 py-2">
+									<div class="card-body">
+										<div class="row no-gutters align-items-center">
+											<div class="col mr-2">
+												<div
+													class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+													Treatment</div>
+												<div class="h5 mb-0 font-weight-bold text-gray-800">
+													<p><%=exercise%></p>
+												</div>
+											</div>
+											<div class="col-auto">
+												<i class="fas fa-prescription-bottle fa-2x text-gray-300"></i>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						<%
+						}
+						%>
+
+						<%
+						if (complications == null || complications.isEmpty()) {
+						} else {
+						%>
+
+							<div class="col-xl-6 col-md-6 mb-4">
+								<div class="card border-left-primary shadow h-100 py-2">
+									<div class="card-body">
+										<div class="row no-gutters align-items-center">
+											<div class="col mr-2">
+												<div
+													class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+													Complications</div>
+												<div class="h5 mb-0 font-weight-bold text-gray-800">
+													<p><%=complications%></p>
+												</div>
+											</div>
+											<div class="col-auto">
+												<i class="fas fa-head-side-virus fa-2x text-gray-300"></i>
 											</div>
 										</div>
 									</div>

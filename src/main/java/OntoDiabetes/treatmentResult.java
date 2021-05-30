@@ -90,14 +90,36 @@ public class treatmentResult extends HttpServlet {
 				String uncontrolled = getUncontrolled(userID, queryEngine);
 				String acceptable = getAcceptable(userID, queryEngine);
 				String optimal = getOptimal(userID, queryEngine);
+				String complications = getComplications(userID, queryEngine);
+				String exercise = getTreatment(userID, queryEngine);
+				String feet = getTreatment1(userID, queryEngine);
 
 				uncontrolled = uncontrolled.replace("null", "");
 				acceptable = acceptable.replace("null", "");
 				optimal = optimal.replace("null", "");
+				exercise = exercise.replace("null", "");
+				complications = complications.replace("null", "");
 
+				String treatment = "<ul>";
+				if (exercise.length() > 0) {
+					treatment = "<li>";
+					treatment = exercise;
+					treatment = "</li>";
+
+				}
+
+				
+				if (feet.length() > 0) {
+					treatment = "<li>";
+					treatment = feet;
+					treatment = "</li>";
+
+				}
 				session.setAttribute("uncontrolled", uncontrolled);
 				session.setAttribute("acceptable", acceptable);
 				session.setAttribute("optimal", optimal);
+				session.setAttribute("exercise", treatment);
+				session.setAttribute("complications", complications);
 
 				response.sendRedirect("treatmentResult.jsp");
 
@@ -169,7 +191,59 @@ public class treatmentResult extends HttpServlet {
 			String[] arrOfStr = results.getValue("x").toString().split("Diabetes_ontology:");
 			message += arrOfStr[1].substring(0, 1).toUpperCase() + arrOfStr[1].substring(1).toLowerCase();
 			message += "</li>";
-			System.out.println(arrOfStr[1]);
+
+		}
+
+		return message;
+	}
+
+	public String getTreatment(String UserID, SQWRLQueryEngine queryEngine)
+			throws SQWRLException, SWRLParseException, OWLOntologyCreationException {
+
+		String message = "";
+		SQWRLResult results = queryEngine.runSQWRLQuery("q4", "#Patient(?p) ^ #hasPatientID(?p, \"" + UserID
+				+ "\") ^ #doExercise(?p,true) -> sqwrl:select(?p) ^ sqwrl:columnNames(\"x\")");
+
+		// Process the SQWRL result
+
+		while (results.next()) {
+			message = "You should do exercise. Kindly click on this <a href='exercise.jsp' target='blank'>link</a> to view a guide on the exercise.";
+		}
+
+		return message;
+	}
+	
+	public String getTreatment1(String UserID, SQWRLQueryEngine queryEngine)
+			throws SQWRLException, SWRLParseException, OWLOntologyCreationException {
+
+		String message = "";
+		SQWRLResult results = queryEngine.runSQWRLQuery("q4", "#Patient(?p) ^ #hasPatientID(?p, \"" + UserID
+				+ "\") ^ #hasNoFeetSensation(?p,Yes) -> sqwrl:select(?p) ^ sqwrl:columnNames(\"x\")");
+
+		// Process the SQWRL result
+
+		while (results.next()) {
+			message = "You should do follow steps to take care of your feet. Kindly click on this <a href='feet.jsp' target='blank'>link</a> to view a guide on how to take care of your feet.";
+		}
+
+		return message;
+	}
+
+	public String getComplications(String UserID, SQWRLQueryEngine queryEngine)
+			throws SQWRLException, SWRLParseException, OWLOntologyCreationException {
+
+		String message = "<ul>";
+
+		SQWRLResult results = queryEngine.runSQWRLQuery("q4", "#Patient(?p) ^ #hasPatientID(?p, \"" + UserID
+				+ "\") ^ #has_complications(?p,?uncontrol) -> sqwrl:select(?uncontrol) ^ sqwrl:columnNames(\"x\")");
+
+		// Process the SQWRL result
+
+		while (results.next()) {
+			message += "<li>";
+			String[] arrOfStr = results.getValue("x").toString().split("Diabetes_ontology:");
+			message += arrOfStr[1].substring(0, 1).toUpperCase() + arrOfStr[1].substring(1).toLowerCase();
+			message += "</li>";
 
 		}
 
