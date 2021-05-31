@@ -302,7 +302,7 @@ public class treatment extends HttpServlet {
 		SQWRLQueryEngine queryEngine = SWRLAPIFactory.createSQWRLQueryEngine(ontology);
 
 		SQWRLResult result1 = queryEngine.runSQWRLQuery("q2",
-				"#Patient(?p) ^ #treatmentWeek(?p, ?x) -> sqwrl:select(?x)  ^ sqwrl:columnNames(\"x\")");
+				"#Patient(?p)  ^ #hasPatientID(?p, \"" + userid	+ "\")  ^ #treatmentWeek(?p, ?x) -> sqwrl:select(?x)  ^ sqwrl:columnNames(\"x\")");
 
 		// Process the SQWRL result
 
