@@ -42,7 +42,8 @@ final String id = request.getParameter("patientid");
 				<div class="card shadow mb-4">
 					<div class="card-header py-3">
 						<h6 class="m-0 font-weight-bold text-primary">Kindly perform
-							all the tests with your doctor and input your result</h6>
+							all the tests with your doctor and the doctor will input your
+							result</h6>
 					</div>
 					<div class="card-body">
 
@@ -297,6 +298,10 @@ final String id = request.getParameter("patientid");
 												class="form-control form-control-user" id="valueText"
 												name="valueText" placeholder="Value (mmol/1-1)" required>
 										</div>
+
+
+							
+
 										<%
 										String message = (String) request.getAttribute("errorMessage");
 										%>

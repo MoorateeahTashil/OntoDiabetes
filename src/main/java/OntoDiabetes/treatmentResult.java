@@ -66,8 +66,42 @@ public class treatmentResult extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		String userid = request.getParameter("patientID1");
+		String comments = request.getParameter("comments");
+		System.out.print(comments);
+		OWLOntologyManager ontologyManager = OWLManager.createOWLOntologyManager();
+		OWLOntology ontology;
+		try {
+			ontology = ontologyManager
+					.loadOntologyFromOntologyDocument(new File(getServletContext().getRealPath("Diabetes.owl")));
+			String base = "http://www.semanticweb.org/adarsh/ontologies/2021/2/Diabetes_ontology#";
+			PrefixManager pm = new DefaultPrefixManager(null, null, base);
+			OWLDataFactory dataFactory = OWLManager.getOWLDataFactory();
+
+			// Adding an instance to class patient
+			OWLClass patientClass = dataFactory.getOWLClass(":Patient", pm);
+			OWLNamedIndividual patient = dataFactory.getOWLNamedIndividual(":Patient_" + userid, pm);
+
+			OWLClassAssertionAxiom classAssertion = dataFactory.getOWLClassAssertionAxiom(patientClass, patient);
+			ontologyManager.addAxiom(ontology, classAssertion);
+
+			XMLWriterPreferences.getInstance().setUseNamespaceEntities(true);
+
+			// Comments
+			removeDataProperty(ontologyManager, ontology, base, pm, dataFactory, patient, ":comments");
+			OWLDataProperty hasHeight = dataFactory.getOWLDataProperty(":comments", pm);
+			OWLDataPropertyAssertionAxiom heightPropertyAssertion = dataFactory.getOWLDataPropertyAssertionAxiom(hasHeight,
+					patient, comments);
+			ontologyManager.addAxiom(ontology, heightPropertyAssertion);
+			ontologyManager.saveOntology(ontology);
+
+			response.sendRedirect("dashboardDoc.jsp");
+
+		} catch (OWLOntologyCreationException | OWLOntologyStorageException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	
 	}
 
 	/**
@@ -79,6 +113,7 @@ public class treatmentResult extends HttpServlet {
 
 		HttpSession session = request.getSession(false);
 		String userID = (String) session.getAttribute("userID");
+		userID = request.getParameter("patientID");
 
 		OWLOntologyManager ontologyManager = OWLManager.createOWLOntologyManager();
 		OWLOntology ontology;
@@ -95,6 +130,7 @@ public class treatmentResult extends HttpServlet {
 				String feet = getTreatment1(userID, queryEngine);
 				String creatine = getTreatment2(userID, queryEngine);
 				String medicines = getMedications(userID, queryEngine);
+				String comments = getComments(userID, queryEngine);
 
 
 				uncontrolled = uncontrolled.replace("null", "");
@@ -104,6 +140,7 @@ public class treatmentResult extends HttpServlet {
 				complications = complications.replace("null", "");
 				creatine = creatine.replace("null", "");
 				medicines = medicines.replace("null", "");
+				comments = comments.replace("null", "");
 
 				uncontrolled = uncontrolled.replace("Overweight", "Weight");
 				optimal = optimal.replace("Overweight", "Weight");
@@ -137,6 +174,7 @@ public class treatmentResult extends HttpServlet {
 				session.setAttribute("exercise", treatment);
 				session.setAttribute("complications", complications);
 				session.setAttribute("medicines", medicines);
+				session.setAttribute("comments", comments);
 
 				response.sendRedirect("treatmentResult.jsp");
 
@@ -282,6 +320,28 @@ public class treatmentResult extends HttpServlet {
 
 		return message;
 	}
+	
+	
+	public String getComments(String UserID, SQWRLQueryEngine queryEngine)
+			throws SQWRLException, SWRLParseException, OWLOntologyCreationException {
+
+		String message = "<ul>";
+
+		SQWRLResult results = queryEngine.runSQWRLQuery("q1221", "#Patient(?p) ^ #hasPatientID(?p, \"" + UserID
+				+ "\") ^ #comments(?p,?uncontrol) -> sqwrl:select(?uncontrol) ^ sqwrl:columnNames(\"x\")");
+
+		// Process the SQWRL result
+
+		while (results.next()) {
+			message += "<li>";
+			String[] arrOfStr = results.getValue("x").toString().split("Diabetes_ontology:");
+			message += arrOfStr[1].substring(0, 1).toUpperCase() + arrOfStr[1].substring(1).toLowerCase();
+			message += "</li>";
+
+		}
+
+		return message;
+	}
 
 	public String getMedications(String UserID, SQWRLQueryEngine queryEngine)
 			throws SQWRLException, SWRLParseException, OWLOntologyCreationException {
@@ -317,5 +377,26 @@ public class treatmentResult extends HttpServlet {
 		}
 
 		return message;
+	}
+	
+	
+	public static void removeDataProperty(OWLOntologyManager ontologyManager, OWLOntology ontology, String base,
+			PrefixManager pm, OWLDataFactory dataFactory, OWLNamedIndividual indi, String dataProp)
+			throws OWLOntologyCreationException, OWLOntologyStorageException {
+
+		OWLDataProperty dataProperty = dataFactory.getOWLDataProperty(dataProp, pm);
+
+		for (OWLAxiom a : ontology.getAxioms(AxiomType.DATA_PROPERTY_ASSERTION)) {
+			{
+
+				if (a.getSignature().contains(dataProperty)) {
+					ontologyManager.removeAxiom(ontology, a);
+
+					break;
+
+				}
+			}
+		}
+		ontology.saveOntology();
 	}
 }

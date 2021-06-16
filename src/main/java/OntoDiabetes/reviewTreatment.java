@@ -87,7 +87,7 @@ public class reviewTreatment extends HttpServlet {
 		try {
 			Queries(id);
 			updateTask(id);
-			addTask(id,"Pending" , "You have received your results.<br/> You can view them at <a href=''treatmentResult.jsp'' target=''_blank''>View Results</a> <br/> You may proceed with the link after a week to enter your details again to continue the treatment plan." ,"treatment.jsp");
+			addTask(id,"Pending" , "Results are ready.<br/> You can view them at <a href=''treatmentResult.jsp?patientid="+id +"'' target=''_blank''>View Results</a> <br/> You may proceed with the link after a week to enter your details again to continue the treatment plan." ,"treatment.jsp?patientid="+id);
 		} catch (SQWRLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -204,7 +204,7 @@ public class reviewTreatment extends HttpServlet {
 			Statement st = con.createStatement();
 
 			String query = " INSERT INTO [OntoDiabetes_Task]([status],[assign_to],[description],[link] ,[to_doc]) VALUES('"
-					+ status + "','" + userid + "','" + message + "','" + link + "','no')";
+					+ status + "','" + userid + "','" + message + "','" + link + "','yes')";
 
 			log(query);
 			// send and execute SQL query in Database software

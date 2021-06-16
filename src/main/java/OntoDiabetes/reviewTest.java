@@ -82,8 +82,8 @@ public class reviewTest extends HttpServlet {
 		if (messages.contains("Diabetes Mellitus")) {
 			try {
 				updateStage(id, "Treatment Phase(Diagnosed with Diabetes)");
-				addTask(id, "Pending", "You have been diagnosed with diabetes. We will start your treatment plan.",
-						"treatment.jsp?patientID=" + id);
+				addTaskDoc(id, "Pending", "You have been diagnosed with diabetes. We will start your treatment plan.",
+						"treatment.jsp?patientid=" + id);
 				inferDiabetes(id);
 			} catch (ClassNotFoundException | SQLException | OWLOntologyCreationException | OWLOntologyStorageException
 					| ParseException | SWRLParseException | SWRLBuiltInException e) {
@@ -195,8 +195,6 @@ public class reviewTest extends HttpServlet {
 		swrlRuleEngine.infer();
 
 		ontologyManager.saveOntology(ontology);
-		
-		
 
 		SQWRLResult hasDiabetes = queryEngine.runSQWRLQuery("q5", "#Patient(?p) ^ #hasPatientID(?p, \"" + UserID
 				+ "\") ^ #hasDiabetes(?p,true) -> sqwrl:select(?p) ^ sqwrl:columnNames(\"x\")");
@@ -207,10 +205,10 @@ public class reviewTest extends HttpServlet {
 			message.clear();
 			message.add("Patient has Diabetes Mellitus).");
 		}
-		
 
-		SQWRLResult hasImpairedGlucoseTolerance = queryEngine.runSQWRLQuery("q5", "#Patient(?p) ^ #hasPatientID(?p, \"" + UserID
-				+ "\") ^ #hasImpairedGlucoseTolerance(?p,true) -> sqwrl:select(?p) ^ sqwrl:columnNames(\"x\")");
+		SQWRLResult hasImpairedGlucoseTolerance = queryEngine.runSQWRLQuery("q5",
+				"#Patient(?p) ^ #hasPatientID(?p, \"" + UserID
+						+ "\") ^ #hasImpairedGlucoseTolerance(?p,true) -> sqwrl:select(?p) ^ sqwrl:columnNames(\"x\")");
 
 		// Process the SQWRL result
 
@@ -219,8 +217,9 @@ public class reviewTest extends HttpServlet {
 			message.add("Patient has Impaired Glucose Tolerance (IGT).");
 		}
 
-		SQWRLResult hasImpairedFastingGlycaemia = queryEngine.runSQWRLQuery("q5", "#Patient(?p) ^ #hasPatientID(?p, \"" + UserID
-				+ "\") ^ #hasImpairedFastingGlycaemia(?p,true) -> sqwrl:select(?p) ^ sqwrl:columnNames(\"x\")");
+		SQWRLResult hasImpairedFastingGlycaemia = queryEngine.runSQWRLQuery("q5",
+				"#Patient(?p) ^ #hasPatientID(?p, \"" + UserID
+						+ "\") ^ #hasImpairedFastingGlycaemia(?p,true) -> sqwrl:select(?p) ^ sqwrl:columnNames(\"x\")");
 
 		// Process the SQWRL result
 
@@ -304,7 +303,33 @@ public class reviewTest extends HttpServlet {
 
 	}
 
-	public void inferDiabetes(String userId) throws SWRLParseException, SWRLBuiltInException, OWLOntologyCreationException, OWLOntologyStorageException {
+	public void addTaskDoc(String userid, String status, String message, String link) throws ClassNotFoundException,
+			SQLException, ParseException, OWLOntologyCreationException, OWLOntologyStorageException {
+		Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+//variables
+
+		con = DriverManager.getConnection(url, user, password);
+		try {
+			Statement st = con.createStatement();
+
+			String query = " INSERT INTO [OntoDiabetes_Task]([status],[assign_to],[description],[link] ,[to_doc]) VALUES('"
+					+ status + "','" + userid + "','" + message + "','" + link + "','Yes')";
+
+			log(query);
+			// send and execute SQL query in Database software
+			st.execute(query);
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		con.close();
+
+	}
+
+	public void inferDiabetes(String userId)
+			throws SWRLParseException, SWRLBuiltInException, OWLOntologyCreationException, OWLOntologyStorageException {
 
 		OWLOntologyManager ontologyManager = OWLManager.createOWLOntologyManager();
 		OWLOntology ontology = ontologyManager
@@ -330,8 +355,6 @@ public class reviewTest extends HttpServlet {
 				patient, true);
 		ontologyManager.addAxiom(ontology, idPropertyAssertion);
 
-
-		
 		ontologyManager.saveOntology(ontology);
 
 	}

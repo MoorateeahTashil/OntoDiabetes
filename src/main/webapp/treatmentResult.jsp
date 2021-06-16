@@ -47,7 +47,7 @@ DatabaseConnection db = new DatabaseConnection();
 final String url = db.getUrlConnection();
 final String user = db.getUser();
 final String password = db.getPassword();
-
+final String pid = request.getParameter("patientid");
 String id = "";
 String name = "";
 String gender = "";
@@ -65,9 +65,8 @@ try {
 	Statement st1 = con.createStatement();
 
 	String query = "select userid,cast(round(bmi,2) as numeric(36,2)) as bmi,surname,lastname,middlename,gender,age from OntoDiabetes_PatientDetails  where userid="
-	+ session.getAttribute("userID") + ";";
-	String query1 = "select * from [OntoDiabetes_TestResults] where [patientId]=" + session.getAttribute("userID")
-	+ ";";
+	+ pid + ";";
+	String query1 = "select * from [OntoDiabetes_TestResults] where [patientId]=" + pid + ";";
 	// send and execute SQL query in Database software
 	ResultSet rs = st.executeQuery(query);
 
@@ -171,26 +170,27 @@ con.close();
 
 						<div class="col-md-12 row">
 
-						<%
-						String uncontrolled = (String) session.getAttribute("uncontrolled");
-						String acceptable = (String) session.getAttribute("acceptable");
-						String optimal = (String) session.getAttribute("optimal");
-						String exercise = (String) session.getAttribute("exercise");
-						String complications = (String) session.getAttribute("complications");
-						String medicines = (String) session.getAttribute("medicines");
+							<%
+							String uncontrolled = (String) session.getAttribute("uncontrolled");
+							String acceptable = (String) session.getAttribute("acceptable");
+							String optimal = (String) session.getAttribute("optimal");
+							String exercise = (String) session.getAttribute("exercise");
+							String complications = (String) session.getAttribute("complications");
+							String medicines = (String) session.getAttribute("medicines");
+							String comments = (String) session.getAttribute("comments");
 
-						session.removeAttribute("uncontrolled");
-						session.removeAttribute("acceptable");
-						session.removeAttribute("optimal");
-						session.removeAttribute("exercise");
-						session.removeAttribute("complications");
-						session.removeAttribute("medicines");
-
-						%>
-						<%
-						if (acceptable == null || acceptable.isEmpty()) {
-						} else {
-						%>
+							session.removeAttribute("uncontrolled");
+							session.removeAttribute("acceptable");
+							session.removeAttribute("optimal");
+							session.removeAttribute("exercise");
+							session.removeAttribute("complications");
+							session.removeAttribute("medicines");
+							session.removeAttribute("comments");
+							%>
+							<%
+							if (acceptable == null || acceptable.isEmpty()) {
+							} else {
+							%>
 
 							<div class="col-xl-6 col-md-6 mb-4">
 								<div class="card border-left-primary shadow h-100 py-2">
@@ -211,14 +211,14 @@ con.close();
 									</div>
 								</div>
 							</div>
-						<%
-						}
-						%>
+							<%
+							}
+							%>
 
-						<%
-						if (optimal == null || optimal.isEmpty()) {
-						} else {
-						%>
+							<%
+							if (optimal == null || optimal.isEmpty()) {
+							} else {
+							%>
 
 							<div class="col-xl-6 col-md-6 mb-4">
 								<div class="card border-left-primary shadow h-100 py-2">
@@ -239,14 +239,14 @@ con.close();
 									</div>
 								</div>
 							</div>
-						<%
-						}
-						%>
+							<%
+							}
+							%>
 
-						<%
-						if (uncontrolled == null || uncontrolled.isEmpty()) {
-						} else {
-						%>
+							<%
+							if (uncontrolled == null || uncontrolled.isEmpty()) {
+							} else {
+							%>
 
 							<div class="col-xl-6 col-md-6 mb-4">
 								<div class="card border-left-primary shadow h-100 py-2">
@@ -267,15 +267,15 @@ con.close();
 									</div>
 								</div>
 							</div>
-						<%
-						}
-						%>
-						
-						
-									<%
-						if (exercise == null || exercise.isEmpty()) {
-						} else {
-						%>
+							<%
+							}
+							%>
+
+
+							<%
+							if (exercise == null || exercise.isEmpty()) {
+							} else {
+							%>
 
 							<div class="col-xl-6 col-md-6 mb-4">
 								<div class="card border-left-primary shadow h-100 py-2">
@@ -296,14 +296,14 @@ con.close();
 									</div>
 								</div>
 							</div>
-						<%
-						}
-						%>
+							<%
+							}
+							%>
 
-						<%
-						if (complications == null || complications.isEmpty()) {
-						} else {
-						%>
+							<%
+							if (complications == null || complications.isEmpty()) {
+							} else {
+							%>
 
 							<div class="col-xl-6 col-md-6 mb-4">
 								<div class="card border-left-primary shadow h-100 py-2">
@@ -324,16 +324,16 @@ con.close();
 									</div>
 								</div>
 							</div>
-						<%
-						}
-						%>
-						
-						
-						
-						<%
-						if (medicines == null || medicines.isEmpty()) {
-						} else {
-						%>
+							<%
+							}
+							%>
+
+
+
+							<%
+							if (medicines == null || medicines.isEmpty()) {
+							} else {
+							%>
 
 							<div class="col-xl-6 col-md-6 mb-4">
 								<div class="card border-left-primary shadow h-100 py-2">
@@ -354,11 +354,69 @@ con.close();
 									</div>
 								</div>
 							</div>
-						<%
-						}
-						%>
+							<%
+							}
+							%>
+
+							<%
+							if (comments == null || comments.isEmpty()) {
+							} else {
+							%>
+
+							<div class="col-xl-6 col-md-6 mb-4">
+								<div class="card border-left-primary shadow h-100 py-2">
+									<div class="card-body">
+										<div class="row no-gutters align-items-center">
+											<div class="col mr-2">
+												<div
+													class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+													Comments</div>
+												<div class="h5 mb-0 font-weight-bold text-gray-800">
+													<p><%=comments%></p>
+												</div>
+											</div>
+											<div class="col-auto">
+												<i class="fa fa-comments fa-2x text-gray-300"></i>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<%
+							}
+							%>
+
 						</div>
 					</div>
+					<%
+					if (session.getAttribute("userType").toString().toLowerCase().equals("doctor")) {
+					%>
+					<br />
+					<hr class="sidebar-divider my-0">
+					<br />
+					<div class="col-md-12">
+						<form class="user" action="treatmentResult" method="get">
+							<input type="text" id="patientID1" name="patientID1"
+								style="display: none;" value="<%=pid%>">
+							<p>Doctor's Comment</p>
+
+
+							<div class="form-group">
+
+								<input class="form-control form-control-user" id="comments"
+									name="comments" placeholder="Comments" required>
+							</div>
+
+
+
+							<input type="submit" ID="buttonSave1"
+								class="btn btn-primary btn-user btn-block" value="Send Comments" />
+						</form>
+					</div>
+
+					<%
+					}
+					%>
 				</div>
 
 

@@ -102,9 +102,8 @@ public class treatment extends HttpServlet {
 		double hbalc = ParseDouble(request.getParameter("hbalc"));
 		String switches = request.getParameter("switch");
 		double valueText = ParseDouble(request.getParameter("valueText"));
-
-		HttpSession session = request.getSession(false);
-		String userID = (String) session.getAttribute("userID");
+		String patient = request.getParameter("patientID");
+		String userID = patient;
 
 		try {
 
@@ -120,7 +119,7 @@ public class treatment extends HttpServlet {
 					"reviewTreatment.jsp?patientid=" + userID);
 			updateTask(userID);
 
-			response.sendRedirect("dashboard.jsp");
+			response.sendRedirect("dashboardDoc.jsp");
 
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
